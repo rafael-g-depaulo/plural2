@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { getStrapiHost } from  "@starter-project/server-conn-info"
+import { getStrapiHost } from  "@plural2/server-conn-info"
 
 context('ListPeople', () => {
   beforeEach(() => {

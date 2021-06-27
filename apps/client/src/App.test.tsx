@@ -1,4 +1,4 @@
-import { add } from "@starter-project/adder"
+import { add } from "@plural2/adder"
 
 import React from 'react'
 import render from 'Utils/render'
