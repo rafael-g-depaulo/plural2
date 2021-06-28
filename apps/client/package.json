@@ -1,9 +1,9 @@
 {
   "name": "@plural2/client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "dependencies": {
-    "@plural2/server-conn-info": "^0.1.1",
+    "@plural2/server-conn-info": "^0.1.2",
     "@testing-library/dom": "^7.28.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

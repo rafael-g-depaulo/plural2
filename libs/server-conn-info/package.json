@@ -1,6 +1,6 @@
 {
   "name": "@plural2/server-conn-info",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "lib to get connection info to connect apps to servers",
   "author": "Rafael G. de Paulo <rafael.g.depaulo@gmail.com>",
   "homepage": "https://github.com/rafael-g-depaulo/plural2#readme",

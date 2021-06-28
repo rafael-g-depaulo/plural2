@@ -1,6 +1,6 @@
 {
   "name": "@plural2/api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "express.js api in typescript",
   "keywords": [
     "api",
@@ -38,7 +38,7 @@
     "url": "https://github.com/rafael-g-depaulo/plural2/issues"
   },
   "dependencies": {
-    "@plural2/adder": "^0.1.1",
+    "@plural2/adder": "^0.1.2",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.7",
     "@types/express": "^4.17.8",
