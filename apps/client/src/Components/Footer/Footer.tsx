@@ -8,7 +8,7 @@ const FooterStyle = styled.div`
   left: 0px;
   bottom: 0px;
 
-  background: #E83479;
+  background: #F0772D;
 `;
 
 const Footer: React.FC = () => {

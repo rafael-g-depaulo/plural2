@@ -11,7 +11,6 @@ export const Home: Router = ({
   match,
 }) => {
   const { path = "" } = match ?? {}
-  
   return (
     <Switch>
 
