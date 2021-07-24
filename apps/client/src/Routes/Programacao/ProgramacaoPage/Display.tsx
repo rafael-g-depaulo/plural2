@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
 import Wireframe from './../../../Components/Wireframe'
-import HomeBG from '../../Home/homeImg.png'
+import PrograBG from './prograImg.png'
 
 const Container = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
@@ -23,7 +23,7 @@ export const Display: FC<DisplayProps> = () => {
   return (
     <>
       <Wireframe>
-        <Container bgImg= {HomeBG}>
+        <Container bgImg= {PrograBG}>
 
         </Container>
       </Wireframe>
