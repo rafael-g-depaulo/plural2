@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import logo from '../Header/plural2_logo2.png';
 import './Mobile.css';
+
+const Img = styled.img `
+  margin-top: 60px;
+  width: 200px;
+  height: 105px;
+  object-fit: contain;
+`;
 
 const Mobile = () => {
 	const [open, setOpen] = useState(false);
@@ -19,37 +28,35 @@ const Mobile = () => {
 			<div onClick={handleClick} className="nav-icon">
 				{open ? <FiX /> : <FiMenu />}
 			</div>
-			<Link to="/" className="nav-logo">
-				Logo
-			</Link>
+			<Img src={logo}/>
 			<ul className={open ? 'nav-links active' : 'nav-links'}>
 				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
+					<Link to="/home" className="nav-link" onClick={closeMenu}>
 						Home
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
+					<Link to="/programacao" className="nav-link" onClick={closeMenu}>
 						Programação
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="" className="nav-link" onClick={closeMenu}>
+					<Link to="/transmissao" className="nav-link" onClick={closeMenu}>
 						Transmissão do Festival
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
+					<Link to="/fotografias" className="nav-link" onClick={closeMenu}>
 						Mostra de Fotografia
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
+					<Link to="/ficha" className="nav-link" onClick={closeMenu}>
 						Ficha Técnica
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
+					<Link to="/contatos" className="nav-link" onClick={closeMenu}>
 						Mapeamento e Contatos
 					</Link>
 				</li>

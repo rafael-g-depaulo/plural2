@@ -4,8 +4,8 @@ import React, {FC} from 'react'
 import styled from "styled-components"
 
 const Container = styled.div`
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 `

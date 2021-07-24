@@ -8,9 +8,13 @@ import {
 
 import Loading from 'Components/Loading'
 
-const Home = lazy(() => import('./Home'))
-const PeopleExample = lazy(() => import('./PeopleExample'))
-const SingletonExample = lazy(() => import('./SingletonExample'))
+const Home        = lazy(() => import('./Home'))
+const Programacao = lazy(() => import('./Programacao'))
+const Transmissao = lazy(() => import('./Transmissao'))
+const Fotografia  = lazy(() => import('./Fotografia'))
+const Ficha       = lazy(() => import('./Ficha'))
+const Contatos    = lazy(() => import('./Contatos'))
+
 
 export type RouterProps<MatchParams = {}> = {
   history?: History,
@@ -43,23 +47,46 @@ const Routes: FC = () => {
           )}
         </Route>
 
-        {/* strapi collection example router */}
-        <Route path="/people-example">
+        <Route path={["/programacao"]}>
+          {({ match }) => (
+            <Suspense fallback={<Loading />}>
+              <Programacao match={match}/>
+            </Suspense> 
+          )}
+        </Route>
+
+        <Route path="/transmissao">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <PeopleExample match={match} />
+                <Transmissao  />
               </Suspense>
             )}
         </Route>
 
-        {/* strapi collection example router */}
-        <Route path="/singleton-example">
+        <Route path="/fotografias">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <SingletonExample match={match} />
+                <Fotografia  />
               </Suspense>
             )}
         </Route>
+
+        <Route path="/ficha">
+            {({ match }) => (
+              <Suspense fallback={<Loading />}>
+                <Ficha  />
+              </Suspense>
+            )}
+        </Route>
+
+        <Route path="/contatos">
+            {({ match }) => (
+              <Suspense fallback={<Loading />}>
+                <Contatos  />
+              </Suspense>
+            )}
+        </Route>
+
       </Switch>
 
     </BaseRouter>

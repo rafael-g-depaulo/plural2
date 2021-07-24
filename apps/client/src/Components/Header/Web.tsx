@@ -64,42 +64,42 @@ export const Header: FC = () => {
     <Container>
       <HeaderContent> 
         <Nav>
-          <Link to="/q" style={{width: "100%", height: "100%"}}>
+          <Link to="/home" style={{width: "100%", height: "100%"}}>
             <Text>
               Home
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/w" style={{width: "100%", height: "100%"}}>
+          <Link to="/programacao" style={{width: "100%", height: "100%"}}>
             <Text>
               Programação
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/e" style={{width: "100%", height: "100%"}}>
+          <Link to="/transmissao" style={{width: "100%", height: "100%"}}>
             <Text>
               Transmissão do Festival
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/r" style={{width: "100%", height: "100%"}}>
+          <Link to="/fotografias" style={{width: "100%", height: "100%"}}>
             <Text>
               Mostra de fotografia
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/r" style={{width: "100%", height: "100%"}}>
+          <Link to="/ficha" style={{width: "100%", height: "100%"}}>
             <Text>
               Ficha Técnica
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/r" style={{width: "100%", height: "100%"}}>
+          <Link to="/contatos" style={{width: "100%", height: "100%"}}>
             <Text>
               Mapeamento e Contatos
             </Text>
