@@ -10,6 +10,8 @@ const Container = styled.div`
   flex-direction: column;
 `
 const Content = styled.main`
+  height: 100%;
+  width: 100%;
   flex-grow: 1;
 `
 export const Wireframe: FC = ({children}) => {

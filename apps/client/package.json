@@ -17,6 +17,7 @@
     "axios": "^0.21.0",
     "dotenv": "^8.2.0",
     "if-env": "^1.0.4",
+    "nuka-carousel": "^4.7.9",
     "react": "^16.13.1",
     "react-burger-menu": "^3.0.6",
     "react-dom": "^16.13.1",
