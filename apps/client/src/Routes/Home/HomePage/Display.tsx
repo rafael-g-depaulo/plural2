@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
 import Wireframe from './../../../Components/Wireframe'
-/* import HomeBG from '../../Home/homeImg.png' */
 import Carousel from 'nuka-carousel'
 import HomeImg1 from '../imagens/plurafinal_01.png'
 import HomeImg2 from '../imagens/plurafinal_02.png'
@@ -17,14 +16,13 @@ const Container = styled.div`
 `;
 
 const Image = styled.div<{bgImg: string}>`
-  margin-top: 50px;
-  margin-bottom: 50px;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: auto;
-  height: 100vh;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
 `;
 
 export interface DisplayProps {
@@ -34,9 +32,9 @@ export interface DisplayProps {
 
 export const Display: FC<DisplayProps> = () => {
   return (
-    <Wireframe>
+
       <Container>
-        <Carousel>
+        <Carousel heightMode="current">
           <Image bgImg = {HomeImg1}></Image>
           <Image bgImg = {HomeImg2}></Image>
           <Image bgImg = {HomeImg3}></Image>
@@ -45,7 +43,7 @@ export const Display: FC<DisplayProps> = () => {
           <Image bgImg = {HomeImg6}></Image>
         </Carousel>
       </Container>
-    </Wireframe>
+
   )
 }
 
