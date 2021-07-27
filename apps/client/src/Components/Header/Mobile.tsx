@@ -24,12 +24,12 @@ const Mobile = () => {
 	};
 
 	return (
-		<nav className="navbar">
-			<div onClick={handleClick} className="nav-icon">
+		<nav className="navbar" id="header">
+			<div onClick={handleClick} className="nav-icon" id="menuOpen">
 				{open ? <FiX /> : <FiMenu />}
 			</div>
 			<Img src={logo}/>
-			<ul className={open ? 'nav-links active' : 'nav-links'}>
+			<ul className={open ? 'nav-links active' : 'nav-links'} id="menu">
 				<li className="nav-item">
 					<Link to="/home" className="nav-link" onClick={closeMenu}>
 						Home
