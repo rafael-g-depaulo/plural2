@@ -4,10 +4,10 @@ import { Route, Switch } from "react-router-dom"
 
 import { Router } from "Routes"
 
-const HomePage = lazy(() => import("./HomePage"))
+const PrograPage = lazy(() => import("./ProgramacaoPage"))
 // const ListItems = lazy(() => import("./ListItems"))
 
-export const Home: Router = ({
+export const Programacao: Router = ({
   match,
 }) => {
   const { path = "" } = match ?? {}
@@ -18,7 +18,7 @@ export const Home: Router = ({
       <Route exact path={path}>
         {() => (
           <Suspense fallback={<Loading />}>
-            <HomePage />
+            <PrograPage />
           </Suspense>
         )}
       </Route>
@@ -36,4 +36,4 @@ export const Home: Router = ({
   )
 }
 
-export default Home
+export default Programacao
