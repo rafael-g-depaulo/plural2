@@ -4,13 +4,12 @@ import Wireframe from './../../../Components/Wireframe'
 import PrograBG from './prograImg.png'
 
 const Container = styled.div<{bgImg: string}>`
+  display: flex;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
 `;
 
 
@@ -21,13 +20,11 @@ export interface DisplayProps {
 
 export const Display: FC<DisplayProps> = () => {
   return (
-    <>
-      <Wireframe>
-        <Container bgImg= {PrograBG}>
+    <Wireframe>
+      <Container bgImg= {PrograBG}>
 
-        </Container>
-      </Wireframe>
-    </>
+      </Container>
+    </Wireframe>
   )
 }
 

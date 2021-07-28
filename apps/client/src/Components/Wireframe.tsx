@@ -4,29 +4,26 @@ import React, {FC} from 'react'
 import styled from "styled-components"
 
 const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `
 const Content = styled.main`
+  display: flex;
+  height: 100%;
   flex-grow: 1;
 `
 export const Wireframe: FC = ({children}) => {
   
   return (
     <Container>
-      <Header>
-
-      </Header>
+      <Header/>
 
       <Content>
         {children}
       </Content>
 
-      <Footer>
-
-      </Footer>
+      <Footer/>
     </Container>
   )
 }

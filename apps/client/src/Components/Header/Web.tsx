@@ -7,11 +7,9 @@ import logo from '../Header/plural2_logo.png';
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: sticky;
   width: 100%;
   height: 50px;
-  left: 0px;
-  top: 0px;
   background-color: #F0772D; 
 `; 
 
