@@ -32,7 +32,7 @@ export interface DisplayProps {
 
 export const Display: FC<DisplayProps> = () => {
   return (
-
+    <Wireframe>
       <Container>
         <Carousel heightMode="current">
           <Image bgImg = {HomeImg1}></Image>
@@ -43,7 +43,7 @@ export const Display: FC<DisplayProps> = () => {
           <Image bgImg = {HomeImg6}></Image>
         </Carousel>
       </Container>
-
+    </Wireframe>
   )
 }
 

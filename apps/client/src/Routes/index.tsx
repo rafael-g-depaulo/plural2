@@ -1,20 +1,23 @@
 import React, { lazy, Suspense } from 'react'
 import Loading from "Components/Loading"
 import {
+  BrowserRouter as BaseRouter,
   Route,
   Switch,
 } from "react-router-dom"
 
-/* const Home        = lazy(() => import('./Home'))
+const Home        = lazy(() => import('./Home'))
 const Programacao = lazy(() => import('./Programacao'))
 const Transmissao = lazy(() => import('./Transmissao'))
 const Fotografia  = lazy(() => import('./Fotografia'))
 const Ficha       = lazy(() => import('./Ficha'))
-const Contatos    = lazy(() => import('./Contatos')) */
+const Contatos    = lazy(() => import('./Contatos'))
 
+
+/*
 const MainPage = lazy(() => import("./Home/MainPage"))
 
-export const Routes: Router = ({
+ export const Routes: Router = ({
   match,
 }) => {
   const { path = "" } = match ?? {}
@@ -22,7 +25,6 @@ export const Routes: Router = ({
   return (
       <Switch>
 
-        {/* base home route */}
         <Route exact path={path}>
           {() => (
             <Suspense fallback={<Loading />}>
@@ -35,9 +37,9 @@ export const Routes: Router = ({
   )
 }
 
-export default Routes
+export default Routes */
 
-/* export type RouterProps<MatchParams = {}> = {
+export type RouterProps<MatchParams = {}> = {
   history?: History,
   location?: Location,
   match: match<MatchParams> | null,
@@ -114,4 +116,4 @@ const Routes: FC = () => {
   )
 }
 
-export default Routes */
+export default Routes 

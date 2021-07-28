@@ -20,11 +20,11 @@ export interface DisplayProps {
 
 export const Display: FC<DisplayProps> = () => {
   return (
-    <>
+    <Wireframe>
       <Container bgImg= {PrograBG}>
 
       </Container>
-    </>
+    </Wireframe>
   )
 }
 
