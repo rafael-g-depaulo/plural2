@@ -12,9 +12,7 @@ const Transmissao = lazy(() => import('./Transmissao'))
 const Fotografia  = lazy(() => import('./Fotografia'))
 const Ficha       = lazy(() => import('./Ficha'))
 const Contatos    = lazy(() => import('./Contatos'))
-
-
-/*
+/* 
 const MainPage = lazy(() => import("./Home/MainPage"))
 
  export const Routes: Router = ({
@@ -23,6 +21,7 @@ const MainPage = lazy(() => import("./Home/MainPage"))
   const { path = "" } = match ?? {}
   
   return (
+    <BaseRouter>
       <Switch>
 
         <Route exact path={path}>
@@ -34,10 +33,11 @@ const MainPage = lazy(() => import("./Home/MainPage"))
         </Route>
         
       </Switch>
+    </BaseRouter>
   )
 }
 
-export default Routes */
+export default Routes  */
 
 export type RouterProps<MatchParams = {}> = {
   history?: History,

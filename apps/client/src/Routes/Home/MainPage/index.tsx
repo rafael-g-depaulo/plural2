@@ -99,7 +99,7 @@ export const HomePage: FC = () => {
       {/* SESSÃO DE CONTATOS */}
       { 
         <>
-          <div ref={contatosRef} id="contatos">
+          <div ref={contatoRef} id="contatos">
             <Contatos />
           </div>
         </>
