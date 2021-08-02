@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imagem_concursos",
+  "info": {
+    "name": "Imagem Concurso"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "nome_autor": {
+      "type": "string",
+      "required": true
+    },
+    "idade_autor": {
+      "type": "integer"
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

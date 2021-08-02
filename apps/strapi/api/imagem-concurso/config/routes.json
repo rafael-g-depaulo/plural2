@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/imagem-concursos",
+      "handler": "imagem-concurso.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/imagem-concursos/count",
+      "handler": "imagem-concurso.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/imagem-concursos/:id",
+      "handler": "imagem-concurso.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/imagem-concursos",
+      "handler": "imagem-concurso.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/imagem-concursos/:id",
+      "handler": "imagem-concurso.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/imagem-concursos/:id",
+      "handler": "imagem-concurso.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
