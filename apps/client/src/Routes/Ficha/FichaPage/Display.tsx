@@ -22,23 +22,32 @@ const FichaOrganize = styled.div`
   width: 100%;
 `;
 
-const Title = styled.div`
+const TitleContainer = styled.div`
+  margin-top: 10px;
+  height: 10%;
+  display: flex;
   flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Title = styled.div`
   text-align: center;
   color: white;
-  padding-top: 50px;
   font-size: large;
 `;
 
 const Line = styled.div`
   background-color: white;
+  margin: 10px;
   height: 1px;
   width: 80%;
   radius: 3px;
 `;
 
 const List = styled.div`
-  flex-grow: 10;
+/*   flex-grow: 10; */
+  height: 90%;
   display: flex;
   justify-content: space-evenly;
   align-content: space-between;
@@ -67,7 +76,9 @@ export const Display: FC<DisplayProps> = () => {
     <Wireframe>
       <Container bgImg= {FichaBG}>
         <FichaOrganize>
-          <Title> Ficha Técnica </Title>
+          <TitleContainer>
+            <Title> Ficha Técnica </Title>
+          </TitleContainer>
           <Line />
           <List>
             <ListColumn>
