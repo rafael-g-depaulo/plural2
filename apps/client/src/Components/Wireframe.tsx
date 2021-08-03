@@ -2,7 +2,7 @@ import Header from './Header'
 import Footer from './Footer/Footer'
 import React, {FC} from 'react'
 import styled from "styled-components"
-import useWidth from 'Hooks/useWidth';
+// import useWidth from 'Hooks/useWidth';
 
 const Container = styled.div`
   display: flex;

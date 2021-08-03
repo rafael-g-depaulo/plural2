@@ -1,3 +1,4 @@
+import { AxiosError } from "axios"
 import useSWR from "swr"
 import { fetcherFn } from "swr/dist/types"
 
@@ -21,7 +22,7 @@ type sucessfulFetch<T> = {
 
 export type fetchHookReturn<Data, Error> = erroredFetch<Error> | loadingFetch | sucessfulFetch<Data>
 
-export function useFetchApi<Data, Error = any> (key: string, fetcher: fetcherFn<Data>) {
+export function useFetchApi<Data, Error = AxiosError> (key: string, fetcher: fetcherFn<Data>) {
   const { data, error, isValidating } = useSWR<Data, Error>(key, fetcher)
 
   return {

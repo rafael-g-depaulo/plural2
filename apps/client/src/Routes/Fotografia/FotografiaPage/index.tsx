@@ -1,12 +1,18 @@
-import React, { FC } from "react"
-//import Loading from "Components/Loading"
-import Display from "./Display"
-import Teste from './../../Ficha/FichaPage/fichaImg.png'
+import { useAllImagemConcurso } from 'Api/ImagensConcurso'
+import Loading from 'Components/Loading'
+import React, { FC } from 'react'
+
+import Display from './Display'
 
 export const FotografiaPage: FC = () => {
-  const imagelist = [Teste, Teste, Teste, Teste, Teste, Teste, Teste, Teste];
+  const imagens = useAllImagemConcurso()
+
+  console.log("imagens", imagens)
+  if (imagens.error) return <div>{imagens.error.message}</div>
+  if (imagens.isLoading) return <Loading />
+  
   return (
-    <Display data={imagelist}/>
+    <Display data={imagens.data}/>
   )
 }
 

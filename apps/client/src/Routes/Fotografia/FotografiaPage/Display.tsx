@@ -4,6 +4,7 @@ import Wireframe from './../../../Components/Wireframe'
 import FotografiaBG from './fotografiaImg.png'
 
 import Popup from 'reactjs-popup';
+import { ImagemConcurso } from "Api/ImagensConcurso";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -104,9 +105,22 @@ const PoppedText = styled.div`
 `;
 
 export interface DisplayProps {
-  data: string[]
+  data: ImagemConcurso[]
 }
 
+const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) => (
+  <Popup
+    trigger={<Image bgImg={image.foto.url} id={id} style={{cursor: "pointer"}}/>}
+    modal key={image.id}
+  >
+    <Popped>
+      <PoppedImg bgImg={image.foto.url}/>
+      <PoppedTextContainer>
+        <PoppedText>{image.titulo}</PoppedText>
+      </PoppedTextContainer>
+    </Popped>
+  </Popup>
+)
 
 export const Display: FC<DisplayProps> = ({data}) => {
   return (
@@ -120,30 +134,17 @@ export const Display: FC<DisplayProps> = ({data}) => {
           <ImageContainer>
             <Content> 
               {data.map((element, index) => {
-                return (
-                  <Popup trigger={
-                      <Image bgImg = {element} id= {"a"+index} style ={{cursor: "pointer"}}/> 
-                  } modal >
-                    <Popped>
-                      <PoppedImg bgImg = {element}/>
-                      <PoppedTextContainer>
-                        <PoppedText>
-                          lorem ipsum
-                        </PoppedText>
-                      </PoppedTextContainer>
-                    </Popped>
-                  </Popup>
-                )
+                return (<ImageDisplay image={element} id={`a${index}`} />)
               })}
             </Content>
             <Content>
               {data.map((element, index) => {
-                return <Image bgImg = {element} id= {"b"+index}/>
+                return (<ImageDisplay image={element} id={`a${index}`} />)
               })}
             </Content>
             <Content>
               {data.map((element, index) => {
-                return <Image bgImg = {element} id= {"c"+index}/>
+                return (<ImageDisplay image={element} id={`a${index}`} />)
               })}
             </Content>
           </ImageContainer>

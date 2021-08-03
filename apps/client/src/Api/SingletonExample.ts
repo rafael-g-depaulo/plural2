@@ -3,19 +3,14 @@ import useFetchApi from "Hooks/useFetchApi"
 import { Asset2Image, Image } from "Utils/Image"
 import StrapiAsset from "Utils/StrapiAsset"
 
-interface StrapiSingletonExample {
-  text: string,
-  image: StrapiAsset,
+export interface RedesSociais {
+  facebook?: string,
+  instagram?: string,
 }
 
-export interface SingletonExample {
-  text: string,
-  image: Image,
-}
-
-export const fetchSingletonExample: () => Promise<SingletonExample> = () => strapi
-  .get<StrapiSingletonExample>(`/singleton-example`)
+export const fetchSingletonExample: () => Promise<RedesSociais> = () => strapi
+  .get<RedesSociais>(`/singleton-example`)
   .then(({ data }) => data)
-  .then(({ text, image }) => ({ text, image: Asset2Image(image) }))
+  // .then(({ text, image }) => ({ text, image: Asset2Image(image) }))
 
-export const useSingletonExample = () => useFetchApi<SingletonExample>(`/singleton-example`, fetchSingletonExample)
+export const useSingletonExample = () => useFetchApi<RedesSociais>(`/singleton-example`, fetchSingletonExample)
