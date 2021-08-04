@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy'
 import Wireframe from './../../../Components/Wireframe'
 import TransmBG from './transmImg.png'
+import Antenas from './anteninhas.png'
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -40,8 +41,18 @@ const Line = styled.div`
   radius: 3px;
 `;
 
+const Antena = styled.div<{bgImg: string}>`
+  background-image: url("${props => props.bgImg}");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+  width: 100%;
+  height: 30%;
+`;
+
 const VideoContainer = styled.div`
   display: flex;
+  flex-direction: column;
 /*   flex-grow: 10; */
   height: 90%;
   justify-content: center;
@@ -62,7 +73,8 @@ export const Display: FC<DisplayProps> = () => {
         </TitleContainer>
         <Line />
         <VideoContainer>
-          <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ'/>
+          <Antena bgImg= {Antenas} />
+          <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' style={{border: "50px solid black", borderRadius: 15}}/>
         </VideoContainer>
       </Container>
     </Wireframe>
