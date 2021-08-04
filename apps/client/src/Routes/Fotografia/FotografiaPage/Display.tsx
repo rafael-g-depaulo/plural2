@@ -123,6 +123,7 @@ const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) =>
 )
 
 export const Display: FC<DisplayProps> = ({data}) => {
+  console.log("yo")
   return (
     <Wireframe>
       <Container bgImg= {FotografiaBG}>

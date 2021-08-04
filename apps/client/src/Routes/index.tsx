@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, FC } from 'react'
 import Loading from "Components/Loading"
 import {
   BrowserRouter as BaseRouter,
@@ -81,7 +81,7 @@ const Routes: FC = () => {
         <Route path="/transmissao">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Transmissao  />
+                <Transmissao match={match} />
               </Suspense>
             )}
         </Route>
@@ -89,7 +89,7 @@ const Routes: FC = () => {
         <Route path="/fotografias">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Fotografia  />
+                <Fotografia match={match} />
               </Suspense>
             )}
         </Route>
@@ -97,7 +97,7 @@ const Routes: FC = () => {
         <Route path="/ficha">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Ficha  />
+                <Ficha match={match} />
               </Suspense>
             )}
         </Route>
@@ -105,7 +105,7 @@ const Routes: FC = () => {
         <Route path="/contatos">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Contatos  />
+                <Contatos match={match} />
               </Suspense>
             )}
         </Route>
