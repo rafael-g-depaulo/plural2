@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "imagem_concursos",
   "info": {
-    "name": "Imagem Concurso"
+    "name": "Imagem Concurso",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -29,6 +30,12 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
