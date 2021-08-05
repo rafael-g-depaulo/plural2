@@ -29,6 +29,7 @@ const Image = styled.div<{bgImg: string}>`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  height: 100vh;
   aspect-ratio: 16/9;
   object-fit: contain;
 
@@ -47,7 +48,7 @@ export const Display: FC<DisplayProps> = () => {
   return (
     <Wireframe>
       <Container>
-        <Carousel heightMode="current">
+        <Carousel heightMode="current" autoplay="true" wrapAround="true">
           <Image bgImg = {width >= mobileLarge ? HomeImg1 : HomeMobile1}></Image>
           <Image bgImg = {width >= mobileLarge ? HomeImg2 : HomeMobile2}></Image>
           <Image bgImg = {width >= mobileLarge ? HomeImg3 : HomeMobile3}></Image>
