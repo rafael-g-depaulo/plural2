@@ -96,16 +96,36 @@ const PoppedImg = styled.div<{bgImg: string}>`
 const PoppedTextContainer = styled.div`
   display: flex;
   width: 50%;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
+  padding: 5%;
 `;
 
-const PoppedText = styled.div`
+const PoppedTitleContainer = styled.div`
+  display: flex;
+  height: 25%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+const PoppedGeneralInfo = styled.div`
+  height: 10%;
+  width: 100%;
+  color: white;
+`;
+
+const PoppedBio = styled.div`
+  height: 45%;
+  width: 100%;
   color: white;
 `;
 
 export interface DisplayProps {
-  data: ImagemConcurso[]
+  data1: ImagemConcurso[]
+  data2: ImagemConcurso[]
+  data3: ImagemConcurso[]
 }
 
 const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) => (
@@ -116,14 +136,27 @@ const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) =>
     <Popped>
       <PoppedImg bgImg={image.foto.url}/>
       <PoppedTextContainer>
-        <PoppedText>{image.titulo}</PoppedText>
+        <PoppedTitleContainer>
+          <div style = {{ fontSize: 42, color: "white"}}> {image.nome_autor} </div>
+        </PoppedTitleContainer>
+        <PoppedGeneralInfo> 
+          <div style = {{ fontSize: 24, color: "white"}}> {image.idade_autor} anos </div>
+        </PoppedGeneralInfo>
+        <PoppedGeneralInfo> 
+          <div style = {{ fontSize: 24, color: "white"}}> {image.cidade} </div>
+        </PoppedGeneralInfo>
+        <PoppedGeneralInfo> 
+          <div style = {{ fontSize: 24, color: "white"}}> Título da obra: {image.titulo} </div>
+        </PoppedGeneralInfo>
+        <PoppedBio> 
+          <div style = {{ fontSize: 24, color: "white"}}>  Bio: {image.bio} </div>
+        </PoppedBio>
       </PoppedTextContainer>
     </Popped>
   </Popup>
 )
 
-export const Display: FC<DisplayProps> = ({data}) => {
-  console.log("yo")
+export const Display: FC<DisplayProps> = ({data1, data2, data3}) => {
   return (
     <Wireframe>
       <Container bgImg= {FotografiaBG}>
@@ -134,18 +167,18 @@ export const Display: FC<DisplayProps> = ({data}) => {
           <Line />
           <ImageContainer>
             <Content> 
-              {data.map((element, index) => {
+              {data1.map((element, index) => {
                 return (<ImageDisplay image={element} id={`a${index}`} />)
               })}
             </Content>
             <Content>
-              {data.map((element, index) => {
-                return (<ImageDisplay image={element} id={`a${index}`} />)
+              {data2.map((element, index) => {
+                return (<ImageDisplay image={element} id={`b${index}`} />)
               })}
             </Content>
             <Content>
-              {data.map((element, index) => {
-                return (<ImageDisplay image={element} id={`a${index}`} />)
+              {data3.map((element, index) => {
+                return (<ImageDisplay image={element} id={`c${index}`} />)
               })}
             </Content>
           </ImageContainer>

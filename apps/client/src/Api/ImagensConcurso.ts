@@ -8,6 +8,8 @@ interface ImagemConcursoStrapi {
   titulo: string
   nome_autor: string
   idade_autor: number
+  cidade: string
+  bio: string
   foto: StrapiAsset
 }
 
@@ -16,14 +18,18 @@ export interface ImagemConcurso {
   titulo: string
   nome_autor: string
   idade_autor: number
+  cidade: string
+  bio: string
   foto: Image
 }
 
-const transformImage = ({ foto, id, idade_autor, nome_autor, titulo }: ImagemConcursoStrapi) => ({
+const transformImage = ({ foto, id, idade_autor, nome_autor, titulo, cidade, bio }: ImagemConcursoStrapi) => ({
   id,
   idade_autor,
   nome_autor,
   titulo,
+  cidade,
+  bio,
   foto: Asset2Image(foto)
 }) as ImagemConcurso
 
