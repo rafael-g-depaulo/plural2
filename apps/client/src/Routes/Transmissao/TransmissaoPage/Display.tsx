@@ -20,7 +20,7 @@ const Container = styled.div<{bgImg: string}>`
 
 const TitleContainer = styled.div`
   margin-top: 10px;
-  height: 10%;
+  height: 15%;
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -31,6 +31,9 @@ const Title = styled.div`
   text-align: center;
   color: white;
   font-size: large;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 25px;
 `;
 
 const Line = styled.div`
@@ -53,8 +56,7 @@ const Antena = styled.div<{bgImg: string}>`
 const VideoContainer = styled.div`
   display: flex;
   flex-direction: column;
-/*   flex-grow: 10; */
-  height: 90%;
+  height: 85%;
   justify-content: center;
   align-items: center;
 `;
