@@ -50,8 +50,8 @@ const Antena = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
   background-position: left;
   background-repeat: no-repeat;
-  background-size: 70% 100%;
-  width: 100%;
+  background-size: 60% 100%;
+  width: 50%;
   height: 30%;
 `;
 
