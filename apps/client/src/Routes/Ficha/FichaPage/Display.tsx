@@ -193,8 +193,3 @@ export const Display: FC<DisplayProps> = () => {
 }
 
 export default Display
-
-
-/* 
-
- */

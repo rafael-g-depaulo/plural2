@@ -94,7 +94,7 @@ export const Display: FC<DisplayProps> = () => {
           <CarouselFlex>
             <CarouselFit>
               <Carousel style = {{height: "100%", width: "100%"}} autoplay="true" wrapAround="true">
-                <ProgramContainer id="pacilda">
+                <ProgramContainer>
                   <ProgramBlock style = {{backgroundColor: "yellow"}}>
 
                   </ProgramBlock>
