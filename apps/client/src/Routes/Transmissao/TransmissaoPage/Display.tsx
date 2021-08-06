@@ -67,7 +67,7 @@ export interface DisplayProps {
 }
 
 
-export const Web: FC<DisplayProps> = () => {
+export const Web: FC<DisplayProps> = (data) => {
   return (
     <Wireframe>
       <Container bgImg= {TransmBG}>
@@ -77,7 +77,7 @@ export const Web: FC<DisplayProps> = () => {
         <Line />
         <VideoContainer>
           <Antena bgImg= {Antenas} />
-          <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' style={{border: "50px solid black", borderRadius: 15}}/>
+          <ReactPlayer url={data.data} style={{border: "50px solid black", borderRadius: 15}}/>
         </VideoContainer>
       </Container>
     </Wireframe>

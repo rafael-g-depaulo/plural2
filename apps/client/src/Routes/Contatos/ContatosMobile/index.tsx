@@ -26,7 +26,6 @@ export const ContatosPage: FC = () => {
     }
   })
 
-  console.log(yout)
   return (
     <Display youtube ={yout} instagram ={inst} facebook ={face} twitter ={twit}/>
   )

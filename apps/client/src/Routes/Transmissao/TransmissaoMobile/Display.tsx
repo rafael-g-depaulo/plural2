@@ -58,7 +58,7 @@ export interface DisplayProps {
 }
 
 
-export const Mobile: FC<DisplayProps> = () => {
+export const Mobile: FC<DisplayProps> = (data) => {
   return (
     <Wireframe>
       <Container bgImg= {TransmMobile}>
@@ -68,7 +68,7 @@ export const Mobile: FC<DisplayProps> = () => {
         <Line />
         <VideoContainer> 
           <div style={{height:"60%", width:"100%"}}>
-            <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' height="100%" width="100%" id="teste" />
+            <ReactPlayer url={data.data} height="100%" width="100%" id="teste" />
           </div>
         </VideoContainer>
       </Container>

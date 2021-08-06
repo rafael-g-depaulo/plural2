@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/transmissao-link",
+      "handler": "transmissao-link.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/transmissao-link",
+      "handler": "transmissao-link.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/transmissao-link",
+      "handler": "transmissao-link.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
