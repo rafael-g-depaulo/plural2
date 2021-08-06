@@ -1,4 +1,4 @@
-import Loading from "Components/Loading"
+/* import Loading from "Components/Loading"
 import React, { lazy, Suspense } from "react"
 import { Route, Switch } from "react-router-dom"
 
@@ -14,7 +14,7 @@ export const Fotografia: Router = ({
   return (
     <Switch>
 
-      {/* base home route */}
+      {/* base home route /}
       <Route exact path={path}>
         {() => (
           <Suspense fallback={<Loading />}>
@@ -23,17 +23,24 @@ export const Fotografia: Router = ({
         )}
       </Route>
 
-      {/* route to list things */}
-      {/* 
-      <Route path={`${path}/:id`}>
-        {({ match }: RouteComponentProps<{ id: string }>) => (
-          <Suspense fallback={<Loading />}>
-            <ListItems id={match.params.id}/>
-          </Suspense>
-        )}
-      </Route> */}
     </Switch>
   )
+}
+
+export default Fotografia */
+
+import React, {FC} from 'react';
+import useWidth from 'Hooks/useWidth';
+import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
+import Mobile from './FotografiaMobile';
+import Web from './FotografiaPage';
+
+const Fotografia: FC = () => {
+  const width = useWidth()
+  if(width <= mobileLarge) {
+    return <Mobile/>
+  } 
+  return <Web/>
 }
 
 export default Fotografia
