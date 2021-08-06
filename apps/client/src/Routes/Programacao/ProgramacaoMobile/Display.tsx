@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
 import Wireframe from './../../../Components/Wireframe'
-import PrograBG from './prograImg.png'
+import PrograBG from './../ProgramacaoPage/prograImg.png'
 import Carousel from 'nuka-carousel'
 
 
@@ -74,7 +74,7 @@ const ProgramContainer = styled.div`
 
 const ProgramBlock = styled.div`
   height: 50vh;
-  width: 25%;
+  width: 70%;
 `;
 
 export interface DisplayProps {
@@ -93,27 +93,35 @@ export const Display: FC<DisplayProps> = () => {
           <Line />
           <CarouselFlex>
             <CarouselFit>
-              <Carousel style = {{height: "100%", width: "100%"}} autoplay="true" wrapAround="true" >
+              <Carousel style = {{height: "100%", width: "100%"}} autoplay="true" wrapAround="true">
                 <ProgramContainer id="pacilda">
                   <ProgramBlock style = {{backgroundColor: "yellow"}}>
 
-                  </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "green"}}>
-                    
-                  </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "white"}}>
-                    
                   </ProgramBlock>
                 </ProgramContainer>
                 <ProgramContainer>
                   <ProgramBlock style = {{backgroundColor: "red"}}>
 
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "black"}}>
-                    
+                </ProgramContainer>
+                <ProgramContainer>
+                  <ProgramBlock style = {{backgroundColor: "white"}}>
+
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "purple"}}>
-                    
+                </ProgramContainer>
+                <ProgramContainer>
+                  <ProgramBlock style = {{backgroundColor: "black"}}>
+
+                  </ProgramBlock>
+                </ProgramContainer>
+                <ProgramContainer>
+                  <ProgramBlock style = {{backgroundColor: "green"}}>
+
+                  </ProgramBlock>
+                </ProgramContainer>
+                <ProgramContainer>
+                  <ProgramBlock style = {{backgroundColor: "blue"}}>
+
                   </ProgramBlock>
                 </ProgramContainer>
               </Carousel>

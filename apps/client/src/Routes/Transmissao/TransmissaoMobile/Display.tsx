@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy'
 import Wireframe from './../../../Components/Wireframe'
 import TransmBG from './transmImg.png'
-import Antenas from './anteninhas.png'
+import TransmMobile from './transmMobile.png'
 import useWidth from 'Hooks/useWidth';
 import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
+
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -14,10 +15,11 @@ const Container = styled.div<{bgImg: string}>`
   background-repeat: no-repeat;
   background-size: cover;
   flex-grow: 1;
-
+  
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 100%;
 `;
 
 const TitleContainer = styled.div`
@@ -46,22 +48,13 @@ const Line = styled.div`
   radius: 3px;
 `;
 
-const Antena = styled.div<{bgImg: string}>`
-  background-image: url("${props => props.bgImg}");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 70% 100%;
-  width: 100%;
-  height: 30%;
-`;
-
 const VideoContainer = styled.div`
   display: flex;
-  flex-direction: column;
   height: 85%;
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20px;
 `;
 
 export interface DisplayProps {
@@ -69,22 +62,23 @@ export interface DisplayProps {
 }
 
 
-export const Web: FC<DisplayProps> = () => {
+export const Mobile: FC<DisplayProps> = () => {
   const width = useWidth()
   return (
     <Wireframe>
-      <Container bgImg= {TransmBG}>
+      <Container bgImg= {TransmMobile}>
         <TitleContainer>
           <Title> Transmissão </Title>
         </TitleContainer>
         <Line />
-        <VideoContainer>
-          <Antena bgImg= {Antenas} />
-          <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' style={{border: "50px solid black", borderRadius: 15}}/>
+        <VideoContainer> 
+          <div style={{height:"60%", width:"100%"}}>
+            <ReactPlayer url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' height="100%" width="100%" id="teste" />
+          </div>
         </VideoContainer>
       </Container>
     </Wireframe>
   )
 }
 
-export default Web
+export default Mobile
