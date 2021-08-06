@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import styled from 'styled-components';
 import Wireframe from './../../../Components/Wireframe'
 import ContatosBG from './contatoImg.png'
-import Instagram from './instagramIcon.png'
-import Facebook from './facebookIcon.png'
-import Twitter from './twitterIcon.png'
-import Youtube from './youtubeIcon.png'
+import InstagramImg from './instagramIcon.png'
+import FacebookImg from './facebookIcon.png'
+import TwitterImg from './twitterIcon.png'
+import YoutubeImg from './youtubeIcon.png'
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -106,14 +106,15 @@ const RedesSociais = styled.div<{bgImg: string}>`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 `;
 
 export interface DisplayProps {
   data: 'teste'
 }
 
+export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter}) => {
 
-export const Display: FC<DisplayProps> = () => {
   return (
     <Wireframe>
       <Container bgImg= {ContatosBG}>
@@ -142,10 +143,18 @@ export const Display: FC<DisplayProps> = () => {
               Acesse também:
             </div>
             <IconsContainer>
-              <RedesSociais  bgImg= {Instagram} />
-              <RedesSociais  bgImg= {Facebook} />
-              <RedesSociais  bgImg= {Twitter} />
-              <RedesSociais  bgImg= {Youtube} />
+              <a href={instagram} taget="_blank">
+                <RedesSociais  bgImg= {InstagramImg}/>
+              </a>
+              <a href={facebook} taget="_blank">
+                <RedesSociais  bgImg= {FacebookImg} />
+              </a>
+              <a href={twitter} taget="_blank">
+                <RedesSociais  bgImg= {TwitterImg} />
+              </a>
+              <a href={youtube} taget="_blank">
+                <RedesSociais  bgImg= {YoutubeImg} />
+              </a>
             </IconsContainer>
           </RedesSociaisContainer>
         </ContatosContainer>
