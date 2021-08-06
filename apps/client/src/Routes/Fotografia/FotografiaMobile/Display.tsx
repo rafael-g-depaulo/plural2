@@ -61,13 +61,6 @@ const ImageContainer = styled.div`
   width: 100%;
 `;
 
-const Content = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  min-width: 100%;
-`;
-
 const Image = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
   background-position: center;

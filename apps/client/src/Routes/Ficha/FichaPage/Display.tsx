@@ -60,6 +60,7 @@ const ListColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 30%;
 
 `;
 
@@ -85,90 +86,103 @@ export const Display: FC<DisplayProps> = () => {
           <List>
             <ListColumn>
               <ListContent>
-                lorem ipsum<br />
+                Idealização:<br />
 
-                ispum lorem ipsum
+                Yuri Rocha e Claudinei Pirelli
               </ListContent>
               <ListContent>
-                lorem ipsum
+                Direção de Produção: <br/>
 
-                ispum lorem ipsum
+                Bloco B Produções <br/>
+                Instituto Transforma
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Coordenação Artística: <br />
+                Yuri Rocha
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
-              </ListContent>
-            </ListColumn>
-            <ListColumn>
-              <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Coordenação de Produção: <br />
+                Claudinei Pirelli
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Coordenador Administrativo: <br />
+                André Luiz Mendes
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Produção executiva: <br />
+                Sérgio Martins
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Assistentes de Produção: <br />
+                Deborah Minardi <br />
+                Lélia Castro
               </ListContent>
             </ListColumn>
             <ListColumn>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Coordenação de Comunicação: <br />
+                Bloco B Produções
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Gestão de Redes Sociais: <br />
+                Jenny Choe
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Assistente de Mídias Sociais: <br />
+                Deborah Minardi
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Assessoria de Imprensa: <br />
+                Território Comunicação
+              </ListContent>
+              <ListContent>
+                Captação de imagens, produção e edição de vídeos: <br />
+                Trupe do Filme
+              </ListContent>
+              <ListContent>
+                Produção da Mostra de Vídeos e Concurso de Fotografia: <br />
+                Jenny Choe
+              </ListContent>
+              <ListContent>
+                Assistente da Mostra de Vídeos e Concurso de Fotografia: <br />
+                Lélia Castro
+              </ListContent>
+              <ListContent>
+                Gerenciamento de Transmissão: <br />
+                Trupe do Filme
               </ListContent>
             </ListColumn>
             <ListColumn>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Designer: <br />
+                André Duarte
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Web Designer / Site, App e Web: <br />
+                Pedro Motta
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Edição de Conteúdo audiovisual para Web: <br />
+                Alexandre Cotinz
               </ListContent>
               <ListContent>
-                lorem ipsum
-
-                ispum lorem ipsum
+                Desenvolvimento de APP e Site: <br />
+              </ListContent>
+              <ListContent>
+                Gerente: <br />
+                Rafael Gonçalves
+              </ListContent>
+              <ListContent>
+                Equipe: <br />
+                Gabriel Martins <br />
+                Clara Maia <br />
+                Raphael Müller <br />
+                Nayara Rossi <br />
+                Oswaldo Henrique <br />
+              </ListContent>
+              <ListContent>
+                Agradecimentos: <br />
+                Espaço Cultural Renato Russo
               </ListContent>
             </ListColumn>
           </List> 
@@ -179,3 +193,8 @@ export const Display: FC<DisplayProps> = () => {
 }
 
 export default Display
+
+
+/* 
+
+ */

@@ -2,11 +2,7 @@ import React, { FC } from "react";
 import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy'
 import Wireframe from './../../../Components/Wireframe'
-import TransmBG from './transmImg.png'
 import TransmMobile from './transmMobile.png'
-import useWidth from 'Hooks/useWidth';
-import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
-
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -63,7 +59,6 @@ export interface DisplayProps {
 
 
 export const Mobile: FC<DisplayProps> = () => {
-  const width = useWidth()
   return (
     <Wireframe>
       <Container bgImg= {TransmMobile}>

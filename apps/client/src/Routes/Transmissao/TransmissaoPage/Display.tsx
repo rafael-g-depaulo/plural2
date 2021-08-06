@@ -4,8 +4,6 @@ import ReactPlayer from 'react-player/lazy'
 import Wireframe from './../../../Components/Wireframe'
 import TransmBG from './transmImg.png'
 import Antenas from './anteninhas.png'
-import useWidth from 'Hooks/useWidth';
-import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -70,7 +68,6 @@ export interface DisplayProps {
 
 
 export const Web: FC<DisplayProps> = () => {
-  const width = useWidth()
   return (
     <Wireframe>
       <Container bgImg= {TransmBG}>
