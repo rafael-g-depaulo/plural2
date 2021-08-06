@@ -46,6 +46,7 @@ const Text = styled.div`
   justify-content: center;
   color: white;
   font-size: 20;
+  font-family: "Comic Sans";
 `;
 
 const Img = styled.img `
@@ -62,42 +63,42 @@ export const Header: FC = () => {
     <Container>
       <HeaderContent> 
         <Nav>
-          <Link to="/home" style={{width: "100%", height: "100%"}}>
+          <Link to="/home" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Home
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/programacao" style={{width: "100%", height: "100%"}}>
+          <Link to="/programacao" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Programação
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/transmissao" style={{width: "100%", height: "100%"}}>
+          <Link to="/transmissao" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Transmissão do Festival
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/fotografias" style={{width: "100%", height: "100%"}}>
+          <Link to="/fotografias" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Mostra de fotografia
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/ficha" style={{width: "100%", height: "100%"}}>
+          <Link to="/ficha" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Ficha Técnica
             </Text>
           </Link>
         </Nav>
         <Nav>
-          <Link to="/contatos" style={{width: "100%", height: "100%"}}>
+          <Link to="/contatos" style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Mapeamento e Contatos
             </Text>

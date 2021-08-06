@@ -102,8 +102,8 @@ const IconsContainer = styled.div`
 
 const RedesSociais = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
-  height: 110px;
-  width: 110px;
+  height: 80px;
+  width: 80px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,17 +125,17 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
         <Line />
         <ContatosContainer>
           <TextContainer>
-            <div style={{fontSize: 36, color: "white"}}> 
+            <div style={{fontSize: 32, color: "white"}}> 
               Queremos conhecer os profissionais 
             </div>
-            <div style={{fontSize: 36, color: "white"}}>
+            <div style={{fontSize: 32, color: "white"}}>
               das artes LGBTQIA+, preencha nosso formulário 
             </div>
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} taget='_blank'>
-                <div style={{color: "white", fontSize: 24, padding: "20px 100px 20px 100px"}}>
+              <a href={form} taget='_blank' style={{textDecoration: "none"}}>
+                <div style={{color: "white", fontSize: 22, padding: "20px 100px 20px 100px"}}>
                   Clique para Acessar
                 </div>
               </a>
