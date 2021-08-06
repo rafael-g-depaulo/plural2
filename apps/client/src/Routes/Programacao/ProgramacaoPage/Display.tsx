@@ -75,7 +75,43 @@ const ProgramContainer = styled.div`
 const ProgramBlock = styled.div`
   height: 50vh;
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 `;
+
+const BlockTitle = styled.div`
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const BlockContent = styled.div`
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-between;
+  
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 10px;
+`;
+
+const BlockText = styled.div`
+  text-align: center;
+  height: auto;
+  color: white;
+  text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+`;
+
 
 export interface DisplayProps {
   data: 'teste'
@@ -93,27 +129,143 @@ export const Display: FC<DisplayProps> = () => {
           <Line />
           <CarouselFlex>
             <CarouselFit>
-              <Carousel style = {{height: "100%", width: "100%"}} autoplay="true" wrapAround="true" >
-                <ProgramContainer id="pacilda">
-                  <ProgramBlock style = {{backgroundColor: "yellow"}}>
-
+              <Carousel style = {{height: "100%", width: "100%"}} /* autoplay="true" */ wrapAround="true" >
+                <ProgramContainer>
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        13/09 - Segunda Feira
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        15:00 - Oficina de Introdução <br /> a produção musical com Logic PRO <br /> com Maika Julieta
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "green"}}>
-                    
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        14/09 - Terça Feira
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        15:00 - Oficina de Introdução <br /> a produção musical com Logic PRO <br /> com Maika Julieta
+                      </BlockText>
+                      <BlockText>
+                        19:00 - A resistência e a <br /> representatividade LGBTQIA+ no <br /> parlamento brasileiro <br />com 04 convidades e 01 mediadore
+                      </BlockText>
+                      <BlockText>
+                        19:30 - Mostra de Fotografia
+                      </BlockText>
+                      <BlockText>
+                        20:00 - Mostra de Cinema Queer
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "white"}}>
-                    
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        15/09 - Quarta Feira
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        15:00 - Oficina de Vogue 
+                      </BlockText>
+                      <BlockText>
+                        19:00 - Roda de Conversa – Tema: <br /> Economia e Mercado Cultural LGBTQIA+ <br /> com 04 convidades e 01 mediadore
+                      </BlockText>
+                      <BlockText>
+                        20:30 - Mostra de Fotografia
+                      </BlockText>
+                      <BlockText>
+                        21:00 - Mostra de Cinema Queer
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
                 </ProgramContainer>
                 <ProgramContainer>
-                  <ProgramBlock style = {{backgroundColor: "red"}}>
-
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        16/09 - Quinta Feira
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        19:00 - Performances com <br /> Élle de Bernardini (SP), Denilson <br /> 
+                        Tourinho (MG), Kael Studart (SP/DF) <br /> e Jajá Rolim (PT/DF)
+                      </BlockText>
+                      <BlockText>
+                        20:00 - Live com Influencer <br /> Spartakus (BA)
+                      </BlockText>
+                      <BlockText>
+                        21:00 - Batalha de Vogue
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "black"}}>
-                    
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        17/09 - Sexta Feira
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        Música a partir das 20h com:
+                      </BlockText>
+                      <BlockText>
+                        Haynna e os Verdes (DF) <br /> 
+                        @haynnaeosverdes <br />
+                        /HaynnaeOsVerdes
+                      </BlockText>
+                      <BlockText>
+                        Rosa Luz (DF) <br />
+                        @ros4luz <br />
+                        /Ros4
+                      </BlockText>
+                      <BlockText>
+                        As Baías (SP) <br />
+                        @asbaias <br />
+                        /AsBaías
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
-                  <ProgramBlock style = {{backgroundColor: "purple"}}>
-                    
+                  <ProgramBlock>
+                    <BlockTitle>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                        18/09 - Sábado
+                      </div>
+                    </BlockTitle>
+                    <Line />
+                    <BlockContent>
+                      <BlockText>
+                        Música a partir das 20h com:
+                      </BlockText>
+                      <BlockText>
+                        Moara (DF) <br />
+                        @moaramusica <br />
+                        /moara
+                      </BlockText>
+                      <BlockText>
+                        Mar e Carol Nóbrega (DF) <br />
+                        @carolnomar <br />
+                        @marnobregamusica <br />
+                        /CarolNóbrega
+                      </BlockText>
+                      <BlockText>
+                        Johnny hooker (PE) <br />
+                        @JohnnyHooker <br />
+                        /JohnnyHookerBR 
+                      </BlockText>
+                    </BlockContent>
                   </ProgramBlock>
                 </ProgramContainer>
               </Carousel>
