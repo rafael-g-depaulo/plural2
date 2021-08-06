@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { useTransmLink } from 'Api/Formulario'
+import { useTransmLink } from 'Api/VideoTransmissao'
 //import { useHelloExample } from "Api/HelloApiExample"
 import Loading from "Components/Loading"
 import Display from "./Display"

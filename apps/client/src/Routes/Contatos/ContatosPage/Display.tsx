@@ -114,7 +114,7 @@ export interface DisplayProps {
   data: 'teste'
 }
 
-export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter}) => {
+export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, form}) => {
 
   return (
     <Wireframe>
@@ -134,9 +134,11 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <div style={{color: "white", fontSize: 24}}>
-                Clique para Acessar
-              </div>
+              <a href={form} taget='_blank'>
+                <div style={{color: "white", fontSize: 24, padding: "20px 100px 20px 100px"}}>
+                  Clique para Acessar
+                </div>
+              </a>
             </AccessButton>
           </AccessButtonContainer>
           <RedesSociaisContainer>

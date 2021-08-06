@@ -7,9 +7,9 @@ export interface Formulario {
   link: string
 }
 
-export const fetchFormulario: () => Promise<Formulario> = () => strapi
-  .get<Formulario>(`/formulario`)
+export const fetchTransmLink: () => Promise<Formulario> = () => strapi
+  .get<Formulario>(`/transmissao-link`)
   .then(({ data }) => data)
   // .then(({ text, image }) => ({ text, image: Asset2Image(image) }))
 
-export const useFormulario = () => useFetchApi<Formulario>(`/formulario`, fetchFormulario)
+export const useTransmLink = () => useFetchApi<Formulario>(`/transmissao-link`, fetchTransmLink)
