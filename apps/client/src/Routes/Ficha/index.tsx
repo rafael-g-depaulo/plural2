@@ -1,4 +1,4 @@
-import Loading from "Components/Loading"
+/* import Loading from "Components/Loading"
 import React, { lazy, Suspense } from "react"
 import { Route, Switch } from "react-router-dom"
 
@@ -14,7 +14,7 @@ export const FichaTecnica: Router = ({
   return (
     <Switch>
 
-      {/* base home route */}
+      {/* base home route /}
       <Route exact path={path}>
         {() => (
           <Suspense fallback={<Loading />}>
@@ -22,18 +22,24 @@ export const FichaTecnica: Router = ({
           </Suspense>
         )}
       </Route>
-
-      {/* route to list things */}
-      {/* 
-      <Route path={`${path}/:id`}>
-        {({ match }: RouteComponentProps<{ id: string }>) => (
-          <Suspense fallback={<Loading />}>
-            <ListItems id={match.params.id}/>
-          </Suspense>
-        )}
-      </Route> */}
     </Switch>
   )
 }
 
-export default FichaTecnica
+export default FichaTecnica */
+
+import React, {FC} from 'react';
+import useWidth from 'Hooks/useWidth';
+import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
+import Mobile from './FichaMobile';
+import Web from './FichaPage';
+
+const Ficha: FC = () => {
+  const width = useWidth()
+  if(width <= mobileLarge) {
+    return <Mobile/>
+  } 
+  return <Web/>
+}
+
+export default Ficha

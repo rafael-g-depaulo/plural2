@@ -4,11 +4,11 @@ import React, { FC } from "react"
 //import Loading from "Components/Loading"
 import Display from "./Display"
 
-export const PrograPage: FC = () => {
+export const Web: FC = () => {
 
   return (
     <Display data={'teste'}/>
   )
 }
 
-export default PrograPage
+export default Web

@@ -1,4 +1,4 @@
-import Loading from "Components/Loading"
+/* import Loading from "Components/Loading"
 import React, { lazy, Suspense } from "react"
 import { Route, Switch } from "react-router-dom"
 
@@ -14,7 +14,7 @@ export const Transmissao: Router = ({
   return (
     <Switch>
 
-      {/* base home route */}
+      {/* base home route /}
       <Route exact path={path}>
         {() => (
           <Suspense fallback={<Loading />}>
@@ -23,7 +23,7 @@ export const Transmissao: Router = ({
         )}
       </Route>
 
-      {/* route to list things */}
+      {/* route to list things /}
       {/* 
       <Route path={`${path}/:id`}>
         {({ match }: RouteComponentProps<{ id: string }>) => (
@@ -31,9 +31,26 @@ export const Transmissao: Router = ({
             <ListItems id={match.params.id}/>
           </Suspense>
         )}
-      </Route> */}
+      </Route> /}
     </Switch>
   )
+}
+
+export default Transmissao
+ */
+
+import React, {FC} from 'react';
+import useWidth from 'Hooks/useWidth';
+import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
+import Mobile from './TransmissaoMobile';
+import Web from './TransmissaoPage';
+
+const Transmissao: FC = () => {
+  const width = useWidth()
+  if(width <= mobileLarge) {
+    return <Mobile/>
+  } 
+  return <Web/>
 }
 
 export default Transmissao

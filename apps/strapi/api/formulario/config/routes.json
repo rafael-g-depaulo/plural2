@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/formulario",
+      "handler": "formulario.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/formulario",
+      "handler": "formulario.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/formulario",
+      "handler": "formulario.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

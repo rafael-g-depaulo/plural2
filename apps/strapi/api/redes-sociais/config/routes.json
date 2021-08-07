@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/redes-sociais",
+      "handler": "redes-sociais.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/redes-sociais/count",
+      "handler": "redes-sociais.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/redes-sociais/:id",
+      "handler": "redes-sociais.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/redes-sociais",
+      "handler": "redes-sociais.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/redes-sociais/:id",
+      "handler": "redes-sociais.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/redes-sociais/:id",
+      "handler": "redes-sociais.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, FC } from 'react'
 import Loading from "Components/Loading"
 import {
   BrowserRouter as BaseRouter,
@@ -12,9 +12,7 @@ const Transmissao = lazy(() => import('./Transmissao'))
 const Fotografia  = lazy(() => import('./Fotografia'))
 const Ficha       = lazy(() => import('./Ficha'))
 const Contatos    = lazy(() => import('./Contatos'))
-
-
-/*
+/* 
 const MainPage = lazy(() => import("./Home/MainPage"))
 
  export const Routes: Router = ({
@@ -23,6 +21,7 @@ const MainPage = lazy(() => import("./Home/MainPage"))
   const { path = "" } = match ?? {}
   
   return (
+    <BaseRouter>
       <Switch>
 
         <Route exact path={path}>
@@ -34,10 +33,11 @@ const MainPage = lazy(() => import("./Home/MainPage"))
         </Route>
         
       </Switch>
+    </BaseRouter>
   )
 }
 
-export default Routes */
+export default Routes  */
 
 export type RouterProps<MatchParams = {}> = {
   history?: History,
@@ -81,7 +81,7 @@ const Routes: FC = () => {
         <Route path="/transmissao">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Transmissao  />
+                <Transmissao match={match} />
               </Suspense>
             )}
         </Route>
@@ -89,7 +89,7 @@ const Routes: FC = () => {
         <Route path="/fotografias">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Fotografia  />
+                <Fotografia match={match} />
               </Suspense>
             )}
         </Route>
@@ -97,7 +97,7 @@ const Routes: FC = () => {
         <Route path="/ficha">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Ficha  />
+                <Ficha match={match} />
               </Suspense>
             )}
         </Route>
@@ -105,7 +105,7 @@ const Routes: FC = () => {
         <Route path="/contatos">
             {({ match }) => (
               <Suspense fallback={<Loading />}>
-                <Contatos  />
+                <Contatos match={match} />
               </Suspense>
             )}
         </Route>

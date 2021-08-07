@@ -8,6 +8,7 @@ export const api = axios.create({
 })
 
 // create axios instance to connect to strapi server
+console.log("strapi url", getStrapiUrl())
 export const strapi = axios.create({
   baseURL: getStrapiUrl(),
 })

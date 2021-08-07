@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "transmissao_links",
+  "info": {
+    "name": "TransmissaoLink",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "link": {
+      "type": "string"
+    }
+  }
+}
