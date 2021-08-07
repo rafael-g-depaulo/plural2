@@ -7,7 +7,7 @@ import FacebookImg from './../ContatosPage/facebookIcon.png'
 import TwitterImg from './../ContatosPage/twitterIcon.png'
 import YoutubeImg from './../ContatosPage/youtubeIcon.png'
 
-const Container = styled.div<{bgImg: string}>`
+const Container = styled.div<{bgImg?: string}>`
   display: flex;
   height: 100%;
   background-image: url("${props => props.bgImg}");
@@ -111,15 +111,16 @@ const RedesSociais = styled.div<{bgImg: string}>`
 `;
 
 export interface DisplayProps {
-  youtube: string
-  facebook: string
-  instagram: string
-  twitter: string
-  form: string
+  youtube?: string
+  facebook?: string
+  instagram?: string
+  twitter?: string
+  form?: string
 }
 
 
 export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, form}) => {
+  console.log({facebook, youtube, instagram, twitter, form})
   return (
     // <Wireframe>
       <Container bgImg= {ContatosBG}>
@@ -150,18 +151,26 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
               Acesse também:
             </div>
             <IconsContainer>
-              <a href={instagram} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {InstagramImg}/>
-              </a>
-              <a href={facebook} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {FacebookImg} />
-              </a>
-              <a href={twitter} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {TwitterImg} />
-              </a>
-              <a href={youtube} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {YoutubeImg} />
-              </a>
+              { instagram &&
+                <a href={instagram} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {InstagramImg}/>
+                </a>
+              }
+              { facebook &&
+                <a href={facebook} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {FacebookImg} />
+                </a>
+              }
+              { twitter &&
+                <a href={twitter} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {TwitterImg} />
+                </a>
+              }
+              { youtube &&
+                <a href={youtube} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {YoutubeImg} />
+                </a>
+              }
             </IconsContainer>
           </RedesSociaisContainer>
         </ContatosContainer>

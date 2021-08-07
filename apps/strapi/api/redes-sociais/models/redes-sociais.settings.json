@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "redes_sociais",
   "info": {
-    "name": "RedesSociais"
+    "name": "redes sociais"
   },
   "options": {
     "increments": true,
@@ -10,10 +10,19 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "facebook": {
       "type": "string"
     },
-    "link": {
+    "youtube": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "formulario": {
       "type": "string"
     }
   }
