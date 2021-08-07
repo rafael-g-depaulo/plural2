@@ -140,11 +140,13 @@ export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitte
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} target='_blank' rel="noopener noreferrer" style={{textDecoration: "none"}}>
-                <div style={{color: "white", fontSize: 22, padding: "20px 100px 20px 100px"}}>
-                  Clique para Acessar
-                </div>
-              </a>
+              { form && 
+                <a href={form} target='_blank' rel="noopener noreferrer" style={{textDecoration: "none"}}>
+                  <div style={{color: "white", fontSize: 22, padding: "20px 100px 20px 100px"}}>
+                    Clique para Acessar
+                  </div>
+                </a>
+              }
             </AccessButton>
           </AccessButtonContainer>
           <RedesSociaisContainer>
