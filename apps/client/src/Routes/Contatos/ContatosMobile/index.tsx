@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { useRedesSociais } from 'Api/RedesSociais'
-// import { useFormulario } from 'Api/Formulario'
+// import { useformularioulario } from 'Api/formularioulario'
 //import { useHelloExample } from "Api/HelloApiExample"
 import Loading from "Components/Loading"
 import Display from "./Display"
@@ -16,7 +16,7 @@ export const ContatosPage: FC = () => {
   const yout = redes.data.youtube
 
   return (
-    <Display youtube={yout} instagram ={inst} facebook={face} twitter={twit} form={redes.data.form}/>
+    <Display youtube={yout} instagram ={inst} facebook={face} twitter={twit} formulario={redes.data.formulario}/>
   )
 }
 

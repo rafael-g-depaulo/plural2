@@ -115,12 +115,12 @@ export interface DisplayProps {
   facebook?: string
   instagram?: string
   twitter?: string
-  form?: string
+  formulario?: string
 }
 
 
-export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, form}) => {
-  console.log({facebook, youtube, instagram, twitter, form})
+export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, formulario}) => {
+  console.log({facebook, youtube, instagram, twitter, formulario})
   return (
     // <Wireframe>
       <Container bgImg= {ContatosBG}>
@@ -130,16 +130,15 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
         <Line />
         <ContatosContainer>
           <TextContainer>
-            <div style={{fontSize: 16, color: "white"}}> 
+            <div style={{fontSize: 16, color: "white", padding: "0 1.6rem", alignText: "center"}}> 
               Queremos conhecer os profissionais 
-            </div>
-            <div style={{fontSize: 16, color: "white"}}>
+
               das artes LGBTQIA+, preencha nosso formulário 
             </div>
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
+              <a href={formulario} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
                 <div style={{color: "white", fontSize: 16, padding: 20}}>
                   Clique para Acessar
                 </div>

@@ -189,7 +189,7 @@ export const Display: FC<DisplayProps> = ({data}) => {
               <Carousel heightMode="first" autoplay wrapAround>
                 {data.map((element, index) => {
                   return (
-                  <CarouFotoContainer>
+                  <CarouFotoContainer key={`${index}`}>
                     <CarouFotoBlock>
                       <ImageDisplay image={element} id={`${index}`} />
                     </CarouFotoBlock>

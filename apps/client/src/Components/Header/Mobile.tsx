@@ -61,7 +61,6 @@ const Mobile: FC<NavbarProps> = ({
 						Programação
 					</NavLink>
 				</li>
-				<iframe width="1280" height="720" src="https://www.youtube.com/embed/1-436HHocGM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 				<li className="nav-item">
 					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickTransmissao?.() }}>
 						Transmissão do Festival
