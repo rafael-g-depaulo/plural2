@@ -1,6 +1,7 @@
 import React, { RefObject, useRef, FC } from "react"
 // import { useHistory } from "react-router-dom"
 import styled from "styled-components"
+import { css } from "styled-components"
 
 import Home from '../HomePage'
 import Contatos from './../../Contatos'
@@ -10,14 +11,23 @@ import Programacao from './../../Programacao'
 import Transmissao from './../../Transmissao'
 
 import Wireframe from '../../../Components/Wireframe'
-
 import useHashUrlScroll from "Hooks/useHashUrlScroll"
 import Separator from "./Separator"
+
+import { Mobile, Desktop } from "Utils/breakpoints/mobileOnly"
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  
+  ${Mobile(css`
+    margin-top: 40px;
+  `)}
+  
+  ${Desktop(css`
+    margin-top: 70px;
+  `)}
 `
 
 const Page = styled.div`
@@ -61,6 +71,7 @@ export const MainPage: FC = () => {
       onClickHome =         {() => handleScroll(homeRef)}
       onClickProgramacao =  {() => handleScroll(programacaoRef)}
       onClickTransmissao =  {() => handleScroll(transmissaoRef)}
+      
     >
       <Container>
         <Page ref={homeRef} id="home">

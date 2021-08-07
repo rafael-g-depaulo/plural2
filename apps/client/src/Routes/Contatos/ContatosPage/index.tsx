@@ -16,7 +16,7 @@ export const ContatosPage: FC = () => {
   const yout = redes.data.youtube
 
   return (
-    <Display youtube={yout} instagram ={inst} facebook={face} twitter={twit} form={redes.data.form}/>
+    <Display youtube={yout} instagram ={inst} facebook={face} twitter={twit} formulario={redes.data.formulario}/>
   )
 }
 

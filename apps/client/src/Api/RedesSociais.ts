@@ -7,7 +7,7 @@ export interface RedesSociais {
   youtube?: string
   instagram?: string
   twitter?: string
-  form?: string
+  formulario?: string
 }
 
 export const fetchRedesSociais = () => strapi
