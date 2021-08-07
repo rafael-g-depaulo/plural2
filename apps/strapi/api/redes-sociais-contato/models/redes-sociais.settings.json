@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "redes_sociais",
+  "collectionName": "redes_sociais_contato",
   "info": {
-    "name": "redes sociais"
+    "name": "redes sociais contato"
   },
   "options": {
     "increments": true,
