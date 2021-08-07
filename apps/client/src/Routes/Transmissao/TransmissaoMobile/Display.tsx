@@ -42,7 +42,7 @@ const Line = styled.div`
   margin: 10px;
   height: 1px;
   width: 80%;
-  radius: 3px;
+  border-radius: 3px;
 `;
 
 const VideoContainer = styled.div`

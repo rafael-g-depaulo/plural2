@@ -44,7 +44,7 @@ const Line = styled.div`
   margin: 10px;
   height: 1px;
   width: 80%;
-  radius: 3px;
+  border-radius: 3px;
 `;
 
 const ContatosContainer = styled.div`
@@ -110,7 +110,11 @@ const RedesSociais = styled.div<{bgImg: string}>`
 `;
 
 export interface DisplayProps {
-  data: 'teste'
+  youtube: string
+  facebook: string
+  instagram: string
+  twitter: string
+  form: string
 }
 
 
@@ -133,7 +137,7 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} target="_blank" style={{ textDecoration: "none"}}>
+              <a href={form} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
                 <div style={{color: "white", fontSize: 16, padding: 20}}>
                   Clique para Acessar
                 </div>
@@ -145,16 +149,16 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
               Acesse também:
             </div>
             <IconsContainer>
-              <a href={instagram} target="_blank">
+              <a href={instagram} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {InstagramImg}/>
               </a>
-              <a href={facebook} target="_blank">
+              <a href={facebook} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {FacebookImg} />
               </a>
-              <a href={twitter} target="_blank">
+              <a href={twitter} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {TwitterImg} />
               </a>
-              <a href={youtube} target="_blank">
+              <a href={youtube} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {YoutubeImg} />
               </a>
             </IconsContainer>

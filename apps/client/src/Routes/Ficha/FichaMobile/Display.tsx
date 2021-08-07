@@ -47,7 +47,7 @@ const Line = styled.div`
   margin: 10px;
   height: 1px;
   width: 80%;
-  radius: 3px;
+  border-radius: 3px;
 `;
 
 const CarouselFlex = styled.div`
@@ -103,7 +103,7 @@ export const Display: FC<DisplayProps> = () => {
           <Line />
           <CarouselFlex>
             <CarouselFit>
-              <Carousel heightMode="first" autoplay="true" wrapAround="true" >
+              <Carousel heightMode="first" autoplay wrapAround >
                 <FichaColumnContainer>
                   <ListColumn>
                     <ListContent>

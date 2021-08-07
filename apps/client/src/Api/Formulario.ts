@@ -2,7 +2,7 @@ import { strapi } from "Api"
 import useFetchApi from "Hooks/useFetchApi"
 
 export interface Formulario {
-  link: string
+  form: string
 }
 
 export const fetchFormulario: () => Promise<Formulario> = () => strapi

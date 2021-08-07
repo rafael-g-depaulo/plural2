@@ -38,7 +38,7 @@ const Line = styled.div`
   margin: 10px;
   height: 1px;
   width: 80%;
-  radius: 3px;
+  border-radius: 3px;
 `;
 
 const ProgramOrganize = styled.div`
@@ -127,7 +127,7 @@ export const Display: FC<DisplayProps> = () => {
           <Line />
           <CarouselFlex>
             <CarouselFit>
-              <Carousel style = {{height: "100%", width: "100%"}} wrapAround="true">
+              <Carousel style = {{height: "100%", width: "100%"}} wrapAround>
                 <ProgramContainer>
                   <ProgramBlock >
                     <BlockTitle>
