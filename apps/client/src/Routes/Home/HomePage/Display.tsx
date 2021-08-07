@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import Carousel from 'nuka-carousel'
 import useWidth from 'Hooks/useWidth';
 import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
@@ -32,21 +32,12 @@ const Image = styled.div<{bgImg: string}>`
   height: 100vh;
   aspect-ratio: 16/9;
   object-fit: contain;
-
-  @media(max-width: ${mobileLarge}){
-    
-  }
 `;
 
-export interface DisplayProps {
-  data: 'teste'
-}
-
-
-export const Display: FC<DisplayProps> = () => {
+export const Display: FC = () => {
   const width = useWidth()
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container>
         <Carousel heightMode="current" autoplay wrapAround>
           <Image bgImg = {width >= mobileLarge ? HomeImg1 : HomeMobile1}></Image>
@@ -57,7 +48,7 @@ export const Display: FC<DisplayProps> = () => {
           <Image bgImg = {width >= mobileLarge ? HomeImg6 : HomeMobile6}></Image>
         </Carousel>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

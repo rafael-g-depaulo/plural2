@@ -13,13 +13,13 @@ export const ContatosPage: FC = () => {
   if (formulario.error) return <div>{formulario.error.message}</div>
   if (formulario.isLoading) return <Loading />
 
-  let face = redes.data.find(ele => ele.nome === "facebook")!.link
-  let inst = redes.data.find(ele => ele.nome === "instagram")!.link
-  let twit = redes.data.find(ele => ele.nome === "twitter")!.link
-  let yout = redes.data.find(ele => ele.nome === "youtube")!.link
+  let face = redes.data.find(ele => ele.nome === "facebook")?.link
+  let inst = redes.data.find(ele => ele.nome === "instagram")?.link
+  let twit = redes.data.find(ele => ele.nome === "twitter")?.link
+  let yout = redes.data.find(ele => ele.nome === "youtube")?.link
 
   return (
-    <Display youtube ={yout} instagram ={inst} facebook ={face} twitter ={twit} form ={formulario.data.form}/>
+    <Display youtube ={yout ?? ""} instagram ={inst ?? ""} facebook ={face ?? ""} twitter ={twit ?? ""} form ={formulario.data.form ?? ""}/>
   )
 }
 

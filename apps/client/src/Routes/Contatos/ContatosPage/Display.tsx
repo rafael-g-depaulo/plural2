@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import ContatosBG from './contatoImg.png'
 import InstagramImg from './instagramIcon.png'
 import FacebookImg from './facebookIcon.png'
@@ -9,6 +9,7 @@ import YoutubeImg from './youtubeIcon.png'
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -122,7 +123,7 @@ export interface DisplayProps {
 export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitter, form }) => {
 
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {ContatosBG}>
         <TitleContainer>
           <Title> Mapeamento e Contatos </Title>
@@ -167,7 +168,7 @@ export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitte
           </RedesSociaisContainer>
         </ContatosContainer>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

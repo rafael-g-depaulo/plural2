@@ -7,7 +7,7 @@ import Display from "./Display"
 export const Mobile: FC = () => {
 
   return (
-    <Display data={'teste'}/>
+    <Display />
   )
 }
 

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { NavbarProps } from 'Components/Wireframe';
+import React, { FC, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../Header/plural2_logo2.png';
 import './Mobile.css';
@@ -12,7 +13,25 @@ const Img = styled.img `
   object-fit: contain;
 `;
 
-const Mobile = () => {
+const Nav = styled.nav`
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+`
+
+const NavLink = styled.span`
+	cursor: pointer;
+`
+
+const Mobile: FC<NavbarProps> = ({
+	onClickContato,
+	onClickFicha,
+	onClickFotografia,
+	onClickHome,
+	onClickProgramacao,
+	onClickTransmissao,	
+}) => {
 	const [open, setOpen] = useState(false);
 
 	const handleClick = () => {
@@ -24,46 +43,46 @@ const Mobile = () => {
 	};
 
 	return (
-		<nav className="navbar" id="header">
+		<Nav className="navbar" id="header">
 			<div onClick={handleClick} className="nav-icon" id="menuOpen">
 				{open ? <FiX /> : <FiMenu />}
 			</div>
-			<Link to="/home" >
-				<Img src={logo}  />
-			</Link>
+			<NavLink className="nav-link" onClick={() => { closeMenu(); onClickHome?.(); }}>
+				<Img src={logo}/>
+			</NavLink>
 			<ul className={open ? 'nav-links active' : 'nav-links'} id="menu">
 				<li className="nav-item">
-					<Link to="/home" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickHome?.(); }}>
 						Home
-					</Link>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<Link to="/programacao" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickProgramacao?.() }}>
 						Programação
-					</Link>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<Link to="/transmissao" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickTransmissao?.() }}>
 						Transmissão do Festival
-					</Link>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<Link to="/fotografias" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickFotografia?.() }}>
 						Mostra de Fotografia
-					</Link>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<Link to="/ficha" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickFicha?.() }}>
 						Ficha Técnica
-					</Link>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<Link to="/contatos" className="nav-link" onClick={closeMenu}>
+					<NavLink className="nav-link" onClick={() => { closeMenu(); onClickContato?.() }}>
 						Mapeamento e Contatos
-					</Link>
+					</NavLink>
 				</li>
 			</ul>
-		</nav>
+		</Nav>
 	);
 };
 

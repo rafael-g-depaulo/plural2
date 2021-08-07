@@ -42,10 +42,10 @@
 	cursor: pointer;
 }
 
-@media only screen and (max-width: 500px) {
-	.navbar {
-		position: relative;
-	}
+@media only screen and (max-width: 600px) {
+	/* .navbar { */
+		/* position: relative; */
+	/* } */
 
 	.nav-links {
 		display: flex;
@@ -54,7 +54,7 @@
 		text-align: center;
     padding-left: 0;
 		width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
 		top: 25px;
 		left: -100%;
 		transition: 0.5s all;

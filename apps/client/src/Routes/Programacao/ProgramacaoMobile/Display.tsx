@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import PrograBG from './../ProgramacaoPage/prograImg.png'
 import Carousel from 'nuka-carousel'
 
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -111,14 +112,9 @@ const BlockText = styled.div`
   filter: drop-shadow(0 0 1px black);
 `;
 
-export interface DisplayProps {
-  data: 'teste'
-}
-
-
-export const Display: FC<DisplayProps> = () => {
+export const Display: FC = () => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {PrograBG}>
         <ProgramOrganize>
           <TitleContainer>
@@ -279,7 +275,7 @@ export const Display: FC<DisplayProps> = () => {
           </CarouselFlex>
         </ProgramOrganize>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

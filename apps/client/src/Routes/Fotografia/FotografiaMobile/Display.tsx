@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import FotografiaBG from './../FotografiaPage/fotografiaImg.png'
 import Carousel from 'nuka-carousel'
 
@@ -9,6 +9,7 @@ import { ImagemConcurso } from "Api/ImagensConcurso";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -176,7 +177,7 @@ const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) =>
 
 export const Display: FC<DisplayProps> = ({data}) => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {FotografiaBG}>
         <PhotoOrganize>
           <TitleContainer>
@@ -199,7 +200,7 @@ export const Display: FC<DisplayProps> = ({data}) => {
           </ImageContainer>
         </PhotoOrganize>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

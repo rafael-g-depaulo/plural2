@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import FichaBG from './../FichaPage/fichaImg.png'
 import Carousel from 'nuka-carousel'
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -87,14 +88,9 @@ const FichaColumnContainer = styled.div`
   width: 100%;
 `;
 
-
-export interface DisplayProps {
-  data: 'teste'
-}
-
-export const Display: FC<DisplayProps> = () => {
+export const Display: FC = () => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {FichaBG}>
         <FichaOrganize>
           <TitleContainer>
@@ -216,7 +212,7 @@ export const Display: FC<DisplayProps> = () => {
           </CarouselFlex> 
         </FichaOrganize>
       </Container>
-    </Wireframe>
+    // {/* </Wireframe> */}
   )
 }
 

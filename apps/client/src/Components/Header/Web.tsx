@@ -1,13 +1,17 @@
 import React, {FC} from 'react';
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
 import logo from '../Header/plural2_logo.png';
+import { NavbarProps } from 'Components/Wireframe';
 
  const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 15;
   width: 100%;
   height: 50px;
   background-color: #F0772D; 
@@ -56,55 +60,74 @@ const Img = styled.img `
   object-fit: contain;
 `;
 
+const ImgContainer = styled.nav`
+  align-self: flex-end;
+`
 
-export const Header: FC = () => {
+const NavLink = styled.span`
+  cursor: pointer;
+`
+
+
+export const Header: FC<NavbarProps> = ({
+	onClickContato,
+	onClickFicha,
+	onClickFotografia,
+	onClickHome,
+	onClickProgramacao,
+	onClickTransmissao,	
+}) => {
   
   return (
     <Container>
       <HeaderContent> 
         <Nav>
-          <Link to="/home" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickHome?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Home
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
         <Nav>
-          <Link to="/programacao" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickProgramacao?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Programação
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
         <Nav>
-          <Link to="/transmissao" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickTransmissao?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Transmissão do Festival
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
         <Nav>
-          <Link to="/fotografias" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickFotografia?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Mostra de fotografia
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
         <Nav>
-          <Link to="/ficha" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickFicha?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Ficha Técnica
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
         <Nav>
-          <Link to="/contatos" style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickContato?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
             <Text>
               Mapeamento e Contatos
             </Text>
-          </Link>
+          </NavLink>
         </Nav>
-        <Img src={logo}/>
+        <ImgContainer>
+          <NavLink onClick={() => onClickHome?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
+            <Img src={logo}/>
+          </NavLink>
+        </ImgContainer>
       </HeaderContent>
     </Container>
   )

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import FotografiaBG from './fotografiaImg.png'
 
 import Popup from 'reactjs-popup';
@@ -8,6 +8,7 @@ import { ImagemConcurso } from "Api/ImagensConcurso";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -161,7 +162,7 @@ const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) =>
 
 export const Display: FC<DisplayProps> = ({data1, data2, data3}) => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {FotografiaBG}>
         <PhotoOrganize>
           <TitleContainer>
@@ -171,23 +172,23 @@ export const Display: FC<DisplayProps> = ({data1, data2, data3}) => {
           <ImageContainer>
             <Content> 
               {data1.map((element, index) => {
-                return (<ImageDisplay image={element} id={`a${index}`} />)
+                return (<ImageDisplay image={element} id={`a${index}`} key={`a${index}`} />)
               })}
             </Content>
             <Content>
               {data2.map((element, index) => {
-                return (<ImageDisplay image={element} id={`b${index}`} />)
+                return (<ImageDisplay image={element} id={`b${index}`} key={`b${index}`} />)
               })}
             </Content>
             <Content>
               {data3.map((element, index) => {
-                return (<ImageDisplay image={element} id={`c${index}`} />)
+                return (<ImageDisplay image={element} id={`c${index}`} key={`c${index}`} />)
               })}
             </Content>
           </ImageContainer>
         </PhotoOrganize>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

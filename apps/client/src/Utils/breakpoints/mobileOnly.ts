@@ -2,7 +2,7 @@ import { css, CSSProp } from "styled-components"
 
 export const desktopLarge = 1080
 export const desktopSmall = 720
-export const mobileLarge = 420
+export const mobileLarge = 600
 
 const minBreakpoint = (breakpoint: number) => `(min-width: ${breakpoint}px)`
 const maxBreakpoint = (breakpoint: number) => `(max-width: ${breakpoint-1}px)`

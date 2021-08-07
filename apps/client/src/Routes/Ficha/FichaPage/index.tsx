@@ -6,8 +6,9 @@ import Display from "./Display"
 
 export const FichaPage: FC = () => {
 
+  console.log("renderizando web 2")
   return (
-    <Display data={'teste'}/>
+    <Display />
   )
 }
 

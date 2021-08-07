@@ -7,7 +7,7 @@ import Display from "./Display"
 export const Web: FC = () => {
 
   return (
-    <Display data={'teste'}/>
+    <Display />
   )
 }
 

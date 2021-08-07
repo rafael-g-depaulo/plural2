@@ -9,10 +9,8 @@ export const TransmissaoPage: FC = () => {
   if (transmLink.error) return <div>{transmLink.error.message}</div>
   if (transmLink.isLoading) return <Loading />
 
-
-  console.log(transmLink.data.link)
   return (
-    <Display data={transmLink.data.link}/>
+    <Display data={transmLink.data}/>
   )
 }
 

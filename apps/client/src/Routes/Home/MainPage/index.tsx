@@ -1,19 +1,31 @@
 import React, { RefObject, useRef, FC } from "react"
-import { useHistory } from "react-router-dom"
-import styled from 'styled-components'
+// import { useHistory } from "react-router-dom"
+import styled from "styled-components"
 
+import Home from '../HomePage'
 import Contatos from './../../Contatos'
 import Ficha from './../../Ficha'
 import Fotografia from './../../Fotografia'
-import Home from './../../Home'
 import Programacao from './../../Programacao'
 import Transmissao from './../../Transmissao'
 
 import Wireframe from '../../../Components/Wireframe'
 
 import useHashUrlScroll from "Hooks/useHashUrlScroll"
+import Separator from "./Separator"
 
-export const HomePage: FC = () => {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
+const Page = styled.div`
+  min-height: 100vh;
+  width: 100%;
+`
+
+export const MainPage: FC = () => {
   const contatoRef      = useRef<HTMLDivElement>(null);
   const fichaRef        = useRef<HTMLDivElement>(null);
   const fotografiaRef   = useRef<HTMLDivElement>(null);
@@ -35,78 +47,49 @@ export const HomePage: FC = () => {
   }
   
   // history (for links)
-  const history = useHistory()
-  const { hash } = history.location
+  // const history = useHistory()
+  // const { hash } = history.location
 
   // handle dynamic scroll
   useHashUrlScroll(eleRefs)
 
   return (
     <Wireframe
-      onClickContato =      {() => history.location.pathname === "/" && hash === "#contato" && handleScroll(contatoRef)}
-      onClickFicha =        {() => history.location.pathname === "/" && hash === "#ficha" && handleScroll(fichaRef)}
-      onClickFotografia =   {() => history.location.pathname === "/" && hash === "#fotografia" && handleScroll(fotografiaRef)}
-      onClickHome =         {() => history.location.pathname === "/" && hash === "#home" && handleScroll(homeRef)}
-      onClickProgramacao =  {() => history.location.pathname === "/" && hash === "#programacao" && handleScroll(programacaoRef)}
-      onClickTransmissao =  {() => history.location.pathname === "/" && hash === "#transmissao" && handleScroll(transmissaoRef)}
+      onClickContato =      {() => handleScroll(contatoRef)}
+      onClickFicha =        {() => handleScroll(fichaRef)}
+      onClickFotografia =   {() => handleScroll(fotografiaRef)}
+      onClickHome =         {() => handleScroll(homeRef)}
+      onClickProgramacao =  {() => handleScroll(programacaoRef)}
+      onClickTransmissao =  {() => handleScroll(transmissaoRef)}
     >
-
-      {/* SESSÃO DE HOME */}
-      { 
-        <>
-          <div ref={homeRef} id="home">
-            <Home />
-          </div>
-        </>
-      }
-
-      {/* SESSÃO DE PROGRAMACAO */}
-      { 
-        <>
-          <div ref={programacaoRef} id="programacao">
-            <Programacao />
-          </div>
-        </>
-      }
-
-      {/* SESSÃO DE TRANSMISSAO */}
-      { 
-        <>
-          <div ref={transmissaoRef} id="transmissao">
-            <Transmissao />
-          </div>
-        </>
-      }
-
-      {/* SESSÃO DE FOTOGRAFIAS */}
-      { 
-        <>
-          <div ref={fotografiaRef} id="fotografia">
-            <Fotografia />
-          </div>
-        </>
-      }
-
-      {/* SESSÃO DE FICHA */}
-      { 
-        <>
-          <div ref={fichaRef} id="ficha">
-            <Ficha />
-          </div>
-        </>
-      }
-
-      {/* SESSÃO DE CONTATOS */}
-      { 
-        <>
-          <div ref={contatoRef} id="contatos">
-            <Contatos />
-          </div>
-        </>
-      }
+      <Container>
+        <Page ref={homeRef} id="home">
+          <Home />
+        </Page>
+        <Separator color="#E83479" />
+        <Page ref={programacaoRef} id="programacao">
+          <Programacao />
+        </Page>
+        <Separator color="#FF761E" />
+        <Page ref={transmissaoRef} id="transmissao">
+          <Transmissao />
+        </Page>
+        <Separator color="#007582" />
+        <Page ref={fotografiaRef} id="fotografia">
+          <Fotografia />
+        </Page>
+        <Separator color="#FF2E7D" />
+        <Page ref={fichaRef} id="ficha">
+          <Ficha />
+        </Page>
+        <Separator color="#00AD52" />
+        <Page ref={contatoRef} id="contato">
+          <Contatos />
+        </Page>
+      </Container>
 
     </Wireframe>
   )
 }
 
-export default HomePage
+export default MainPage

@@ -40,21 +40,22 @@ export const useScrollPosition = (effect: ScrollEffect, { element, wait, useWind
     throttleTimeout.current = null
   }, [element, useWindow, effect])
 
-  useLayoutEffect(() => {
-    const handleScroll = () => {
-      if (wait) {
-        if (throttleTimeout.current === null) {
-          throttleTimeout.current = setTimeout(callback, wait)
-        }
-      } else {
-        callback()
+  const handleScroll = useCallback(() => {
+    if (wait) {
+      if (throttleTimeout.current === null) {
+        throttleTimeout.current = setTimeout(callback, wait)
       }
+    } else {
+      callback()
     }
+  }, [callback, wait])
+
+  useLayoutEffect(() => {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
 
-  }, [wait, callback])
+  }, [wait, callback, handleScroll])
 }
 
 // code taken partly from https://dev.to/n8tb1t/tracking-scroll-position-with-react-hooks-3bbj
