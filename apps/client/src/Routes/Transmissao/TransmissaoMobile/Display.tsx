@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy'
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import TransmMobile from './transmMobile.png'
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +35,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -54,13 +56,13 @@ const VideoContainer = styled.div`
 `;
 
 export interface DisplayProps {
-  data: 'teste'
+  data: string
 }
 
 
 export const Mobile: FC<DisplayProps> = (data) => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {TransmMobile}>
         <TitleContainer>
           <Title> Transmissão </Title>
@@ -72,7 +74,7 @@ export const Mobile: FC<DisplayProps> = (data) => {
           </div>
         </VideoContainer>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

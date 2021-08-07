@@ -3,13 +3,16 @@ import useWidth from 'Hooks/useWidth';
 import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
 import Mobile from './Mobile';
 import Web from './Web';
+import { NavbarProps } from 'Components/Wireframe';
 
-const Header: FC = () => {
+
+
+const Header: FC<NavbarProps> = (props) => {
   const width = useWidth()
   if(width <= mobileLarge) {
-    return <Mobile/>
+    return <Mobile {...props}/>
   } 
-  return <Web/>
+  return <Web {...props}/>
 }
 
 export default Header

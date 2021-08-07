@@ -7,7 +7,7 @@ import Display from "./Display"
 export const HomePage: FC = () => {
 
   return (
-    <Display data={'teste'}/>
+    <Display />
   )
 }
 

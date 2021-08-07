@@ -7,7 +7,7 @@ import Display from "./Display"
 export const FichaPage: FC = () => {
 
   return (
-    <Display data={'teste'}/>
+    <Display />
   )
 }
 

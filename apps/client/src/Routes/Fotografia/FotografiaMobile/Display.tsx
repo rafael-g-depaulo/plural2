@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import FotografiaBG from './../FotografiaPage/fotografiaImg.png'
 import Carousel from 'nuka-carousel'
 
@@ -9,6 +9,7 @@ import { ImagemConcurso } from "Api/ImagensConcurso";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -42,6 +43,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -175,7 +177,7 @@ const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) =>
 
 export const Display: FC<DisplayProps> = ({data}) => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {FotografiaBG}>
         <PhotoOrganize>
           <TitleContainer>
@@ -187,7 +189,7 @@ export const Display: FC<DisplayProps> = ({data}) => {
               <Carousel heightMode="first" autoplay wrapAround>
                 {data.map((element, index) => {
                   return (
-                  <CarouFotoContainer>
+                  <CarouFotoContainer key={`${index}`}>
                     <CarouFotoBlock>
                       <ImageDisplay image={element} id={`${index}`} />
                     </CarouFotoBlock>
@@ -198,7 +200,7 @@ export const Display: FC<DisplayProps> = ({data}) => {
           </ImageContainer>
         </PhotoOrganize>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

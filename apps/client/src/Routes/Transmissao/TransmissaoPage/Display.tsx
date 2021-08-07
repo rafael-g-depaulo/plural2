@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
 import ReactPlayer from 'react-player/lazy'
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import TransmBG from './transmImg.png'
 import Antenas from './anteninhas.png'
+import { VideoTrans } from "Api/VideoTransmissao";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +36,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -63,13 +66,13 @@ const VideoContainer = styled.div`
 `;
 
 export interface DisplayProps {
-  data: 'teste'
+  data: VideoTrans
 }
 
 
-export const Web: FC<DisplayProps> = (data) => {
+export const Web: FC<DisplayProps> = ({ data }) => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {TransmBG}>
         <TitleContainer>
           <Title> Transmissão </Title>
@@ -77,10 +80,10 @@ export const Web: FC<DisplayProps> = (data) => {
         <Line />
         <VideoContainer>
           <Antena bgImg= {Antenas} />
-          <ReactPlayer url={data.data} style={{border: "50px solid black", borderRadius: 15}}/>
+          <ReactPlayer url={data.link} style={{border: "50px solid black", borderRadius: 15}}/>
         </VideoContainer>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

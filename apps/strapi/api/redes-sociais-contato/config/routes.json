@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/redes-sociais",
+      "handler": "redes-sociais.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/redes-sociais",
+      "handler": "redes-sociais.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/redes-sociais",
+      "handler": "redes-sociais.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

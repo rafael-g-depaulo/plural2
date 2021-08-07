@@ -36,9 +36,9 @@ import Web from './FichaPage';
 
 const Ficha: FC = () => {
   const width = useWidth()
-  if(width <= mobileLarge) {
-    return <Mobile/>
-  } 
+  
+  if(width <= mobileLarge)
+    return <Mobile/> 
   return <Web/>
 }
 

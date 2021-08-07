@@ -1,14 +1,15 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import ContatosBG from './../ContatosPage/contatoImg.png'
 import InstagramImg from './../ContatosPage/instagramIcon.png'
 import FacebookImg from './../ContatosPage/facebookIcon.png'
 import TwitterImg from './../ContatosPage/twitterIcon.png'
 import YoutubeImg from './../ContatosPage/youtubeIcon.png'
 
-const Container = styled.div<{bgImg: string}>`
+const Container = styled.div<{bgImg?: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -36,6 +37,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -109,17 +111,18 @@ const RedesSociais = styled.div<{bgImg: string}>`
 `;
 
 export interface DisplayProps {
-  youtube: string
-  facebook: string
-  instagram: string
-  twitter: string
-  form: string
+  youtube?: string
+  facebook?: string
+  instagram?: string
+  twitter?: string
+  formulario?: string
 }
 
 
-export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, form}) => {
+export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, formulario}) => {
+  console.log({facebook, youtube, instagram, twitter, formulario})
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {ContatosBG}>
         <TitleContainer>
           <Title> Mapeamento e Contatos </Title>
@@ -127,44 +130,53 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
         <Line />
         <ContatosContainer>
           <TextContainer>
-            <div style={{fontSize: 16, color: "white"}}> 
+            <div style={{fontSize: 16, color: "white", padding: "0 1.6rem", alignText: "center"}}> 
               Queremos conhecer os profissionais 
-            </div>
-            <div style={{fontSize: 16, color: "white"}}>
+
               das artes LGBTQIA+, preencha nosso formulário 
             </div>
           </TextContainer> 
-          <AccessButtonContainer>
-            <AccessButton>
-              <a href={form} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
-                <div style={{color: "white", fontSize: 16, padding: 20}}>
-                  Clique para Acessar
-                </div>
-              </a>
-            </AccessButton>
-          </AccessButtonContainer>
+          {formulario &&
+            <AccessButtonContainer>
+              <AccessButton>
+                <a href={formulario} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
+                  <div style={{color: "white", fontSize: 16, padding: 20}}>
+                    Clique para Acessar
+                  </div>
+                </a>
+              </AccessButton>
+            </AccessButtonContainer>
+          }
           <RedesSociaisContainer>
             <div style={{color: "white", fontSize: 16}}> 
               Acesse também:
             </div>
             <IconsContainer>
-              <a href={instagram} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {InstagramImg}/>
-              </a>
-              <a href={facebook} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {FacebookImg} />
-              </a>
-              <a href={twitter} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {TwitterImg} />
-              </a>
-              <a href={youtube} target="_blank" rel="noopener noreferrer">
-                <RedesSociais  bgImg= {YoutubeImg} />
-              </a>
+              { instagram &&
+                <a href={instagram} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {InstagramImg}/>
+                </a>
+              }
+              { facebook &&
+                <a href={facebook} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {FacebookImg} />
+                </a>
+              }
+              { twitter &&
+                <a href={twitter} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {TwitterImg} />
+                </a>
+              }
+              { youtube &&
+                <a href={youtube} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg= {YoutubeImg} />
+                </a>
+              }
             </IconsContainer>
           </RedesSociaisContainer>
         </ContatosContainer>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

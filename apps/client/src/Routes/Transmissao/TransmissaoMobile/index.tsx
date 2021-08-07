@@ -10,7 +10,6 @@ export const TransmissaoPage: FC = () => {
   if (transmLink.isLoading) return <Loading />
 
 
-  console.log(transmLink.data.link)
   return (
     <Display data={transmLink.data.link}/>
   )

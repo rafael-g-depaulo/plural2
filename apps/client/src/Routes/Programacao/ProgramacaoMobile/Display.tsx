@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import styled from 'styled-components';
-import Wireframe from './../../../Components/Wireframe'
+// import Wireframe from './../../../Components/Wireframe'
 import PrograBG from './../ProgramacaoPage/prograImg.png'
 import Carousel from 'nuka-carousel'
 
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
+  height: 100%;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -30,6 +31,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -106,20 +108,13 @@ const BlockText = styled.div`
   text-align: center;
   height: auto;
   color: white;
-  text-shadow: -1px 1px 0 #000,
-                1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
+  font-size: 12px;
+  filter: drop-shadow(0 0 1px black);
 `;
 
-export interface DisplayProps {
-  data: 'teste'
-}
-
-
-export const Display: FC<DisplayProps> = () => {
+export const Display: FC = () => {
   return (
-    <Wireframe>
+    // <Wireframe>
       <Container bgImg= {PrograBG}>
         <ProgramOrganize>
           <TitleContainer>
@@ -132,7 +127,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock >
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         13/09 - Segunda Feira
                       </div>
                     </BlockTitle>
@@ -147,7 +142,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         14/09 - Terça Feira
                       </div>
                     </BlockTitle>
@@ -171,7 +166,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         15/09 - Quarta Feira
                       </div>
                     </BlockTitle>
@@ -195,7 +190,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         16/09 - Quinta Feira
                       </div>
                     </BlockTitle>
@@ -217,7 +212,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock >
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         17/09 - Sexta Feira
                       </div>
                     </BlockTitle>
@@ -247,7 +242,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         18/09 - Sábado
                       </div>
                     </BlockTitle>
@@ -280,7 +275,7 @@ export const Display: FC<DisplayProps> = () => {
           </CarouselFlex>
         </ProgramOrganize>
       </Container>
-    </Wireframe>
+    // </Wireframe>
   )
 }
 

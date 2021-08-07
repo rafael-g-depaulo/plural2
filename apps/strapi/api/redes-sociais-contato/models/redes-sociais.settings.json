@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "redes_sociais_contato",
+  "info": {
+    "name": "redes sociais contato"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "formulario": {
+      "type": "string"
+    }
+  }
+}

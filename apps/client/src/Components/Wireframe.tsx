@@ -15,11 +15,36 @@ const Content = styled.main`
   height: 100%;
   flex-grow: 1;
 `
-export const Wireframe: FC = ({children}) => {
+
+export interface NavbarProps {
+  onClickContato?: () => void
+  onClickFicha?: () => void
+  onClickFotografia?: () => void
+  onClickHome?: () => void
+  onClickProgramacao?: () => void
+  onClickTransmissao?: () => void
+}
+
+export const Wireframe: FC<NavbarProps> = ({
+  children, 
+  onClickContato,
+  onClickFicha,
+  onClickFotografia,
+  onClickHome,
+  onClickProgramacao,
+  onClickTransmissao,
+}) => {
   
   return (
     <Container>
-      <Header/>
+      <Header {...{
+        onClickContato,
+        onClickFicha,
+        onClickFotografia,
+        onClickHome,
+        onClickProgramacao,
+        onClickTransmissao,
+      }}/>
 
       <Content>
         {children}
