@@ -39,6 +39,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`

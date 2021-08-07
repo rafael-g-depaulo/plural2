@@ -1,4 +1,4 @@
-import React, { RefObject, useRef } from "react"
+import React, { RefObject, useRef, FC } from "react"
 import { useHistory } from "react-router-dom"
 import styled from 'styled-components'
 
@@ -14,12 +14,12 @@ import Wireframe from '../../../Components/Wireframe'
 import useHashUrlScroll from "Hooks/useHashUrlScroll"
 
 export const HomePage: FC = () => {
-  const contatoRef = useRef<HTMLDivElement>(null);
-  const fichaRef = useRef<HTMLDivElement>(null);
-  const fotografiaRef = useRef<HTMLDivElement>(null);
-  const homeRef = useRef<HTMLDivElement>(null);
-  const programacaoRef = useRef<HTMLDivElement>(null);
-  const transmissaoRef = useRef<HTMLDivElement>(null);
+  const contatoRef      = useRef<HTMLDivElement>(null);
+  const fichaRef        = useRef<HTMLDivElement>(null);
+  const fotografiaRef   = useRef<HTMLDivElement>(null);
+  const homeRef         = useRef<HTMLDivElement>(null);
+  const programacaoRef  = useRef<HTMLDivElement>(null);
+  const transmissaoRef  = useRef<HTMLDivElement>(null);
 
   const eleRefs = [
     contatoRef,
@@ -46,7 +46,7 @@ export const HomePage: FC = () => {
       onClickContato =      {() => history.location.pathname === "/" && hash === "#contato" && handleScroll(contatoRef)}
       onClickFicha =        {() => history.location.pathname === "/" && hash === "#ficha" && handleScroll(fichaRef)}
       onClickFotografia =   {() => history.location.pathname === "/" && hash === "#fotografia" && handleScroll(fotografiaRef)}
-      onClickHome =         {() => history.location.pathname === "/" && hash === "#fhome" && handleScroll(homeRef)}
+      onClickHome =         {() => history.location.pathname === "/" && hash === "#home" && handleScroll(homeRef)}
       onClickProgramacao =  {() => history.location.pathname === "/" && hash === "#programacao" && handleScroll(programacaoRef)}
       onClickTransmissao =  {() => history.location.pathname === "/" && hash === "#transmissao" && handleScroll(transmissaoRef)}
     >

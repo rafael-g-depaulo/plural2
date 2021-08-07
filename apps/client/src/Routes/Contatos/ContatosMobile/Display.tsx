@@ -36,6 +36,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -132,7 +133,7 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} taget="_blank" style={{ textDecoration: "none"}}>
+              <a href={form} target="_blank" style={{ textDecoration: "none"}}>
                 <div style={{color: "white", fontSize: 16, padding: 20}}>
                   Clique para Acessar
                 </div>
@@ -144,16 +145,16 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
               Acesse também:
             </div>
             <IconsContainer>
-              <a href={instagram} taget="_blank">
+              <a href={instagram} target="_blank">
                 <RedesSociais  bgImg= {InstagramImg}/>
               </a>
-              <a href={facebook} taget="_blank">
+              <a href={facebook} target="_blank">
                 <RedesSociais  bgImg= {FacebookImg} />
               </a>
-              <a href={twitter} taget="_blank">
+              <a href={twitter} target="_blank">
                 <RedesSociais  bgImg= {TwitterImg} />
               </a>
-              <a href={youtube} taget="_blank">
+              <a href={youtube} target="_blank">
                 <RedesSociais  bgImg= {YoutubeImg} />
               </a>
             </IconsContainer>

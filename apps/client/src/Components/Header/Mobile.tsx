@@ -28,7 +28,9 @@ const Mobile = () => {
 			<div onClick={handleClick} className="nav-icon">
 				{open ? <FiX /> : <FiMenu />}
 			</div>
-			<Img src={logo}/>
+			<Link to="/home" >
+				<Img src={logo}  />
+			</Link>
 			<ul className={open ? 'nav-links active' : 'nav-links'}>
 				<li className="nav-item">
 					<Link to="/home" className="nav-link" onClick={closeMenu}>

@@ -30,6 +30,7 @@ const Title = styled.div`
   padding: 15px;
   border: 2px solid white;
   border-radius: 25px;
+  font-family: "SpockEss";
 `;
 
 const Line = styled.div`
@@ -106,10 +107,8 @@ const BlockText = styled.div`
   text-align: center;
   height: auto;
   color: white;
-  text-shadow: -1px 1px 0 #000,
-                1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
+  font-size: 12px;
+  filter: drop-shadow(0 0 1px black);
 `;
 
 export interface DisplayProps {
@@ -132,7 +131,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock >
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         13/09 - Segunda Feira
                       </div>
                     </BlockTitle>
@@ -147,7 +146,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         14/09 - Terça Feira
                       </div>
                     </BlockTitle>
@@ -171,7 +170,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         15/09 - Quarta Feira
                       </div>
                     </BlockTitle>
@@ -195,7 +194,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         16/09 - Quinta Feira
                       </div>
                     </BlockTitle>
@@ -217,7 +216,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock >
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         17/09 - Sexta Feira
                       </div>
                     </BlockTitle>
@@ -247,7 +246,7 @@ export const Display: FC<DisplayProps> = () => {
                 <ProgramContainer>
                   <ProgramBlock>
                     <BlockTitle>
-                      <div style={{color: "white", border: "3px solid white", borderRadius: 20, padding: 10}}>
+                      <div style={{color: "white", border: "3px solid white", borderRadius: 16, padding: 10}}>
                         18/09 - Sábado
                       </div>
                     </BlockTitle>

@@ -46,7 +46,7 @@ const Text = styled.div`
   justify-content: center;
   color: white;
   font-size: 20;
-  font-family: "Comic Sans";
+  font-family: "Spock";
 `;
 
 const Img = styled.img `
