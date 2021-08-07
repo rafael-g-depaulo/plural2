@@ -13,7 +13,7 @@ import { NavbarProps } from 'Components/Wireframe';
   top: 0;
   z-index: 15;
   width: 100%;
-  height: 50px;
+  height: 80px;
   background-color: #F0772D; 
 `; 
 
@@ -34,7 +34,7 @@ const Nav = styled.nav`
 
   background-color: #F0772D;
   width: 200px;
-  height: 30px;
+  height: 80%;
   border-radius: 18px;
 
   &:hover{
@@ -65,6 +65,7 @@ const ImgContainer = styled.nav`
 `
 
 const NavLink = styled.span`
+
   cursor: pointer;
 `
 
@@ -82,14 +83,14 @@ export const Header: FC<NavbarProps> = ({
     <Container>
       <HeaderContent> 
         <Nav>
-          <NavLink onClick={() => onClickHome?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickHome?.()} style={{width: "100%", height: "100%", textDecoration: "none", textAlign: "center"}}>
             <Text>
               Home
             </Text>
           </NavLink>
         </Nav>
         <Nav>
-          <NavLink onClick={() => onClickProgramacao?.()} style={{width: "100%", height: "100%", textDecoration: "none"}}>
+          <NavLink onClick={() => onClickProgramacao?.()} style={{width: "100%", height: "100%", textDecoration: "none", textAlign: "center"}}>
             <Text>
               Programação
             </Text>

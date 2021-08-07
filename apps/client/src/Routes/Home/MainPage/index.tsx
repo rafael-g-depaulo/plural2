@@ -18,6 +18,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 40px;
 `
 
 const Page = styled.div`
@@ -61,6 +62,7 @@ export const MainPage: FC = () => {
       onClickHome =         {() => handleScroll(homeRef)}
       onClickProgramacao =  {() => handleScroll(programacaoRef)}
       onClickTransmissao =  {() => handleScroll(transmissaoRef)}
+      
     >
       <Container>
         <Page ref={homeRef} id="home">
