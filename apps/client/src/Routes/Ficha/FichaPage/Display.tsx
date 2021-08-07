@@ -90,8 +90,7 @@ const FichaColumnContainer = styled.div`
 `;
 
 export const Display: FC = () => {
-  
-  console.log("renderizando web 3")
+
   return (
     // <Wireframe>
       <Container bgImg= {FichaBG}>

@@ -10,7 +10,6 @@ import { NavbarProps } from 'Components/Wireframe';
 const Header: FC<NavbarProps> = (props) => {
   const width = useWidth()
   if(width <= mobileLarge) {
-    console.log("cu")
     return <Mobile {...props}/>
   } 
   return <Web {...props}/>

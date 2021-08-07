@@ -36,14 +36,10 @@ import Web from './FichaPage';
 
 const Ficha: FC = () => {
   const width = useWidth()
-
-  console.log(`tamanho ${width} mobile ${mobileLarge}`)
-  if(width <= mobileLarge) {
-    console.log("renderizando mobile")
-    return <Mobile/>
-  } 
-    console.log("renderizando web")
-    return <Web/>
+  
+  if(width <= mobileLarge)
+    return <Mobile/> 
+  return <Web/>
 }
 
 export default Ficha
