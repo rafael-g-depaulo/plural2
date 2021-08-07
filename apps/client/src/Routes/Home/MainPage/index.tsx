@@ -2,7 +2,6 @@ import React, { RefObject, useRef, FC } from "react"
 // import { useHistory } from "react-router-dom"
 import styled from "styled-components"
 import { css } from "styled-components"
-import { mobileLarge } from 'Utils/breakpoints/mobileOnly';
 
 import Home from '../HomePage'
 import Contatos from './../../Contatos'
