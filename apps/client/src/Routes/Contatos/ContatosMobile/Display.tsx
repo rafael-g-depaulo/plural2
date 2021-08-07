@@ -137,15 +137,17 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
               das artes LGBTQIA+, preencha nosso formulário 
             </div>
           </TextContainer> 
-          <AccessButtonContainer>
-            <AccessButton>
-              <a href={form} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
-                <div style={{color: "white", fontSize: 16, padding: 20}}>
-                  Clique para Acessar
-                </div>
-              </a>
-            </AccessButton>
-          </AccessButtonContainer>
+          {form &&
+            <AccessButtonContainer>
+              <AccessButton>
+                <a href={form} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
+                  <div style={{color: "white", fontSize: 16, padding: 20}}>
+                    Clique para Acessar
+                  </div>
+                </a>
+              </AccessButton>
+            </AccessButtonContainer>
+          }
           <RedesSociaisContainer>
             <div style={{color: "white", fontSize: 16}}> 
               Acesse também:
