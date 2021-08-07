@@ -120,7 +120,6 @@ export interface DisplayProps {
 
 
 export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, formulario}) => {
-  console.log({facebook, youtube, instagram, twitter, formulario})
   return (
     // <Wireframe>
       <Container bgImg= {ContatosBG}>
