@@ -48,7 +48,7 @@ export const Display: FC<DisplayProps> = () => {
   return (
     <Wireframe>
       <Container>
-        <Carousel heightMode="current" autoplay="true" wrapAround="true">
+        <Carousel heightMode="current" autoplay wrapAround>
           <Image bgImg = {width >= mobileLarge ? HomeImg1 : HomeMobile1}></Image>
           <Image bgImg = {width >= mobileLarge ? HomeImg2 : HomeMobile2}></Image>
           <Image bgImg = {width >= mobileLarge ? HomeImg3 : HomeMobile3}></Image>

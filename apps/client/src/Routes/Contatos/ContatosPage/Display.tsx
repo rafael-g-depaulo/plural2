@@ -43,7 +43,7 @@ const Line = styled.div`
   margin: 10px;
   height: 1px;
   width: 80%;
-  radius: 3px;
+  border-radius: 3px;
 `;
 
 const ContatosContainer = styled.div`
@@ -111,10 +111,14 @@ const RedesSociais = styled.div<{bgImg: string}>`
 `;
 
 export interface DisplayProps {
-  data: 'teste'
+  youtube: string
+  facebook: string
+  instagram: string
+  twitter: string
+  form: string
 }
 
-export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, form}) => {
+export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitter, form }) => {
 
   return (
     <Wireframe>
@@ -134,7 +138,7 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
           </TextContainer> 
           <AccessButtonContainer>
             <AccessButton>
-              <a href={form} taget='_blank' style={{textDecoration: "none"}}>
+              <a href={form} target='_blank' rel="noopener noreferrer" style={{textDecoration: "none"}}>
                 <div style={{color: "white", fontSize: 22, padding: "20px 100px 20px 100px"}}>
                   Clique para Acessar
                 </div>
@@ -146,16 +150,16 @@ export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter
               Acesse também:
             </div>
             <IconsContainer>
-              <a href={instagram} taget="_blank">
+              <a href={instagram} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {InstagramImg}/>
               </a>
-              <a href={facebook} taget="_blank">
+              <a href={facebook} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {FacebookImg} />
               </a>
-              <a href={twitter} taget="_blank">
+              <a href={twitter} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {TwitterImg} />
               </a>
-              <a href={youtube} taget="_blank">
+              <a href={youtube} target="_blank" rel="noopener noreferrer">
                 <RedesSociais  bgImg= {YoutubeImg} />
               </a>
             </IconsContainer>
