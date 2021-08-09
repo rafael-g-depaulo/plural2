@@ -14,6 +14,7 @@ import HomeMobile1 from '../imagens/mobile_1.png'
 import HomeMobile2 from '../imagens/mobile_2.png'
 import HomeMobile3 from '../imagens/mobile_3.png'
 import HomeMobile4 from '../imagens/mobile_4.png'
+import HomeMobile4_2 from '../imagens/mobile_4.2.png'
 import HomeMobile5 from '../imagens/mobile_5.png'
 import HomeMobile6 from '../imagens/mobile_6.png'
 
@@ -34,18 +35,19 @@ const Image = styled.div<{bgImg: string}>`
   object-fit: contain;
 `;
 
+const mobileImgs  = [HomeMobile1, HomeMobile2, HomeMobile3, HomeMobile4, HomeMobile4_2, HomeMobile5, HomeMobile6] 
+const webImgs     = [HomeImg1, HomeImg2, HomeImg3,HomeImg4, HomeImg5, HomeImg6]
+
 export const Display: FC = () => {
   const width = useWidth()
+  const imgArr = width >= mobileLarge ? webImgs : mobileImgs
   return (
     // <Wireframe>
       <Container>
         <Carousel heightMode="current" autoplay wrapAround>
-          <Image bgImg = {width >= mobileLarge ? HomeImg1 : HomeMobile1}></Image>
-          <Image bgImg = {width >= mobileLarge ? HomeImg2 : HomeMobile2}></Image>
-          <Image bgImg = {width >= mobileLarge ? HomeImg3 : HomeMobile3}></Image>
-          <Image bgImg = {width >= mobileLarge ? HomeImg4 : HomeMobile4}></Image>
-          <Image bgImg = {width >= mobileLarge ? HomeImg5 : HomeMobile5}></Image>
-          <Image bgImg = {width >= mobileLarge ? HomeImg6 : HomeMobile6}></Image>
+          {imgArr.map((imgSrc) => {
+            return (<Image bgImg={imgSrc} />)
+          })}
         </Carousel>
       </Container>
     // </Wireframe>
