@@ -7,9 +7,10 @@ import Carousel from 'nuka-carousel'
 import Popup from 'reactjs-popup';
 import { ImagemConcurso } from "Api/ImagensConcurso";
 
-const Container = styled.div<{bgImg: string}>`
+const Container = styled.div<{ bgImg: string }>`
   display: flex;
   height: 100%;
+  min-height: 100vh;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +64,7 @@ const ImageContainer = styled.div`
   width: 100%;
 `;
 
-const Image = styled.div<{bgImg: string}>`
+const Image = styled.div<{ bgImg: string }>`
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -104,7 +105,7 @@ const Popped = styled.div`
   background-color: #46A1AB;
 `;
 
-const PoppedImg = styled.div<{bgImg: string}>`
+const PoppedImg = styled.div<{ bgImg: string }>`
   background-image: url("${props => props.bgImg}");
   width: 100%;
   height: 50%;
@@ -147,59 +148,60 @@ export interface DisplayProps {
   data: ImagemConcurso[]
 }
 
-const ImageDisplay: FC<{image: ImagemConcurso, id: string}> = ({ image, id }) => (
+const ImageDisplay: FC<{ image: ImagemConcurso, id: string }> = ({ image, id }) => (
   <Popup
-    trigger={<Image bgImg={image.foto.url} id={id} style={{cursor: "pointer"}}/>}
+    trigger={<Image bgImg={image.foto.url} id={id} style={{ cursor: "pointer" }} />}
     modal key={image.id}
   >
     <Popped>
-      <PoppedImg bgImg={image.foto.url}/>
+      <PoppedImg bgImg={image.foto.url} />
       <PoppedTextContainer>
         <PoppedTitleContainer>
-          <div style = {{ fontSize: 36, color: "white"}}> {image.nome_autor} </div>
+          <div style={{ fontSize: 36, color: "white" }}> {image.nome_autor} </div>
         </PoppedTitleContainer>
-        <PoppedGeneralInfo> 
-          <div style = {{ fontSize: 12, color: "white"}}> {image.idade_autor} anos </div>
+        <PoppedGeneralInfo>
+          <div style={{ fontSize: 12, color: "white" }}> {image.idade_autor} anos </div>
         </PoppedGeneralInfo>
-        <PoppedGeneralInfo> 
-          <div style = {{ fontSize: 12, color: "white"}}> {image.cidade} </div>
+        <PoppedGeneralInfo>
+          <div style={{ fontSize: 12, color: "white" }}> {image.cidade} </div>
         </PoppedGeneralInfo>
-        <PoppedGeneralInfo> 
-          <div style = {{ fontSize: 12, color: "white"}}> Título da obra: {image.titulo} </div>
+        <PoppedGeneralInfo>
+          <div style={{ fontSize: 12, color: "white" }}> Título da obra: {image.titulo} </div>
         </PoppedGeneralInfo>
-        <PoppedBio> 
-          <div style = {{ fontSize: 12, color: "white"}}>  Bio: {image.bio} </div>
+        <PoppedBio>
+          <div style={{ fontSize: 12, color: "white" }}>  Bio: {image.bio} </div>
         </PoppedBio>
       </PoppedTextContainer>
     </Popped>
   </Popup>
 )
 
-export const Display: FC<DisplayProps> = ({data}) => {
+export const Display: FC<DisplayProps> = ({ data }) => {
   return (
     // <Wireframe>
-      <Container bgImg= {FotografiaBG}>
-        <PhotoOrganize>
-          <TitleContainer>
-            <Title> Mostra Fotográfica </Title>
-          </TitleContainer>
-          <Line />
-          <ImageContainer>
-            <CarouselFit>
-              <Carousel heightMode="first" autoplay wrapAround>
-                {data.map((element, index) => {
-                  return (
+    <Container bgImg={FotografiaBG}>
+      <PhotoOrganize>
+        <TitleContainer>
+          <Title> Mostra Fotográfica </Title>
+        </TitleContainer>
+        <Line />
+        <ImageContainer>
+          <CarouselFit>
+            <Carousel heightMode="first" autoplay wrapAround>
+              {data.map((element, index) => {
+                return (
                   <CarouFotoContainer key={`${index}`}>
                     <CarouFotoBlock>
                       <ImageDisplay image={element} id={`${index}`} />
                     </CarouFotoBlock>
                   </CarouFotoContainer>
-                )})}
-              </Carousel>
-            </CarouselFit>
-          </ImageContainer>
-        </PhotoOrganize>
-      </Container>
+                )
+              })}
+            </Carousel>
+          </CarouselFit>
+        </ImageContainer>
+      </PhotoOrganize>
+    </Container>
     // </Wireframe>
   )
 }
