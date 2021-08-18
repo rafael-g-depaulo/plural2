@@ -7,9 +7,10 @@ import FacebookImg from './../ContatosPage/facebookIcon.png'
 import TwitterImg from './../ContatosPage/twitterIcon.png'
 import YoutubeImg from './../ContatosPage/youtubeIcon.png'
 
-const Container = styled.div<{bgImg?: string}>`
+const Container = styled.div<{ bgImg?: string }>`
   display: flex;
   height: 100%;
+  min-height: 100vh;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -73,7 +74,7 @@ const AccessButtonContainer = styled.div`
   align-items: center;
 `;
 
-const AccessButton =styled.div`
+const AccessButton = styled.div`
   background-color: #42D977;
   width: 60%;
   height: 80%;
@@ -101,7 +102,7 @@ const IconsContainer = styled.div`
   align-items: center;
 `;
 
-const RedesSociais = styled.div<{bgImg: string}>`
+const RedesSociais = styled.div<{ bgImg: string }>`
   background-image: url("${props => props.bgImg}");
   height: 41px;
   width: 41px;
@@ -119,62 +120,62 @@ export interface DisplayProps {
 }
 
 
-export const Display: FC<DisplayProps> = ({facebook, youtube, instagram, twitter, formulario}) => {
+export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitter, formulario }) => {
   return (
     // <Wireframe>
-      <Container bgImg= {ContatosBG}>
-        <TitleContainer>
-          <Title> Mapeamento e Contatos </Title>
-        </TitleContainer>
-        <Line />
-        <ContatosContainer>
-          <TextContainer>
-            <div style={{fontSize: 16, color: "white", padding: "0 1.6rem", alignText: "center"}}> 
-              Queremos conhecer os profissionais 
+    <Container bgImg={ContatosBG}>
+      <TitleContainer>
+        <Title> Mapeamento e Contatos </Title>
+      </TitleContainer>
+      <Line />
+      <ContatosContainer>
+        <TextContainer>
+          <div style={{ fontSize: 16, color: "white", padding: "0 1.6rem", alignText: "center" }}>
+            Queremos conhecer os profissionais
 
-              das artes LGBTQIA+, preencha nosso formulário 
-            </div>
-          </TextContainer> 
-          {formulario &&
-            <AccessButtonContainer>
-              <AccessButton>
-                <a href={formulario} target="_blank"  rel="noopener noreferrer" style={{ textDecoration: "none"}}>
-                  <div style={{color: "white", fontSize: 16, padding: 20}}>
-                    Clique para Acessar
-                  </div>
-                </a>
-              </AccessButton>
-            </AccessButtonContainer>
-          }
-          <RedesSociaisContainer>
-            <div style={{color: "white", fontSize: 16}}> 
-              Acesse também:
-            </div>
-            <IconsContainer>
-              { instagram &&
-                <a href={instagram} target="_blank" rel="noopener noreferrer">
-                  <RedesSociais  bgImg= {InstagramImg}/>
-                </a>
-              }
-              { facebook &&
-                <a href={facebook} target="_blank" rel="noopener noreferrer">
-                  <RedesSociais  bgImg= {FacebookImg} />
-                </a>
-              }
-              { twitter &&
-                <a href={twitter} target="_blank" rel="noopener noreferrer">
-                  <RedesSociais  bgImg= {TwitterImg} />
-                </a>
-              }
-              { youtube &&
-                <a href={youtube} target="_blank" rel="noopener noreferrer">
-                  <RedesSociais  bgImg= {YoutubeImg} />
-                </a>
-              }
-            </IconsContainer>
-          </RedesSociaisContainer>
-        </ContatosContainer>
-      </Container>
+            das artes LGBTQIA+, preencha nosso formulário
+          </div>
+        </TextContainer>
+        {formulario &&
+          <AccessButtonContainer>
+            <AccessButton>
+              <a href={formulario} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                <div style={{ color: "white", fontSize: 16, padding: 20 }}>
+                  Clique para Acessar
+                </div>
+              </a>
+            </AccessButton>
+          </AccessButtonContainer>
+        }
+        <RedesSociaisContainer>
+          <div style={{ color: "white", fontSize: 16 }}>
+            Acesse também:
+          </div>
+          <IconsContainer>
+            {instagram &&
+              <a href={instagram} target="_blank" rel="noopener noreferrer">
+                <RedesSociais bgImg={InstagramImg} />
+              </a>
+            }
+            {facebook &&
+              <a href={facebook} target="_blank" rel="noopener noreferrer">
+                <RedesSociais bgImg={FacebookImg} />
+              </a>
+            }
+            {twitter &&
+              <a href={twitter} target="_blank" rel="noopener noreferrer">
+                <RedesSociais bgImg={TwitterImg} />
+              </a>
+            }
+            {youtube &&
+              <a href={youtube} target="_blank" rel="noopener noreferrer">
+                <RedesSociais bgImg={YoutubeImg} />
+              </a>
+            }
+          </IconsContainer>
+        </RedesSociaisContainer>
+      </ContatosContainer>
+    </Container>
     // </Wireframe>
   )
 }
