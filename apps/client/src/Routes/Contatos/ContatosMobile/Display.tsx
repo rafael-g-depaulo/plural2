@@ -55,6 +55,7 @@ const ContatosContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex-grow: 7;
 `;
 
 const TextContainer = styled.div`

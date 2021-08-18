@@ -54,6 +54,7 @@ const VideoContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 20px;
+  flex-grow: 7;
 `;
 
 export interface DisplayProps {
