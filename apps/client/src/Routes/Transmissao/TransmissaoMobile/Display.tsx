@@ -4,9 +4,10 @@ import ReactPlayer from 'react-player/lazy'
 // import Wireframe from './../../../Components/Wireframe'
 import TransmMobile from './transmMobile.png'
 
-const Container = styled.div<{bgImg: string}>`
+const Container = styled.div<{ bgImg: string }>`
   display: flex;
   height: 100%;
+  min-height: 100vh;
   background-image: url("${props => props.bgImg}");
   background-position: center;
   background-repeat: no-repeat;
@@ -63,17 +64,17 @@ export interface DisplayProps {
 export const Mobile: FC<DisplayProps> = (data) => {
   return (
     // <Wireframe>
-      <Container bgImg= {TransmMobile}>
-        <TitleContainer>
-          <Title> Transmissão </Title>
-        </TitleContainer>
-        <Line />
-        <VideoContainer> 
-          <div style={{height:"60%", width:"100%"}}>
-            <ReactPlayer url={data.data} height="100%" width="100%" id="teste" />
-          </div>
-        </VideoContainer>
-      </Container>
+    <Container bgImg={TransmMobile}>
+      <TitleContainer>
+        <Title> Transmissão </Title>
+      </TitleContainer>
+      <Line />
+      <VideoContainer>
+        <div style={{ height: "60%", width: "100%" }}>
+          <ReactPlayer url={data.data} height="100%" width="100%" id="teste" />
+        </div>
+      </VideoContainer>
+    </Container>
     // </Wireframe>
   )
 }
