@@ -26,6 +26,7 @@ const PhotoOrganize = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
+  flex-grow: 1;
 `;
 
 const TitleContainer = styled.div`
@@ -62,6 +63,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-grow: 8;
 `;
 
 const Image = styled.div<{ bgImg: string }>`
