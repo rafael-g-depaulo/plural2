@@ -18,7 +18,17 @@ export const ContatosPage: FC = () => {
   const { oi_link, oi_futuro_link, oi_imagem, oi_futuro_imagem } = redes.data
 
   return (
-    <Display youtube={yout} instagram ={inst} facebook={face} twitter={twit} formulario={redes.data.formulario} oi_link={oi_link} oi_futuro_link={oi_futuro_link} oi_imagem={oi_imagem} oi_futuro_imagem={oi_futuro_imagem} />
+    <Display
+      youtube={yout}
+      instagram={inst}
+      facebook={face}
+      twitter={twit}
+      formulario={redes.data.formulario}
+      oi_link={oi_link}
+      oi_futuro_link={oi_futuro_link}
+      oi_imagem={oi_imagem}
+      oi_futuro_imagem={oi_futuro_imagem}
+    />
   )
 }
 
