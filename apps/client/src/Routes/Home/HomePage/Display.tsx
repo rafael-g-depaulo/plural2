@@ -45,8 +45,8 @@ export const Display: FC = () => {
     // <Wireframe>
       <Container>
         <Carousel heightMode="current" autoplay wrapAround>
-          {imgArr.map((imgSrc) => {
-            return (<Image bgImg={imgSrc} />)
+          {imgArr.map((imgSrc, i) => {
+            return (<Image bgImg={imgSrc} key={i} />)
           })}
         </Carousel>
       </Container>

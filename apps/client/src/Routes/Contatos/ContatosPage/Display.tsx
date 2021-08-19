@@ -6,6 +6,7 @@ import InstagramImg from './instagramIcon.png'
 import FacebookImg from './facebookIcon.png'
 import TwitterImg from './twitterIcon.png'
 import YoutubeImg from './youtubeIcon.png'
+import { Image } from "Utils/Image";
 
 const Container = styled.div<{bgImg: string}>`
   display: flex;
@@ -118,9 +119,14 @@ export interface DisplayProps {
   instagram?: string
   twitter?: string
   formulario?: string
+  
+  oi_link?: string
+  oi_futuro_link?: string
+  oi_imagem?: Image
+  oi_futuro_imagem?: Image
 }
 
-export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitter, formulario }) => {
+export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitter, formulario, oi_futuro_imagem, oi_futuro_link, oi_imagem, oi_link }) => {
   return (
     // <Wireframe>
       <Container bgImg= {ContatosBG}>
@@ -169,8 +175,18 @@ export const Display: FC<DisplayProps> = ({ facebook, youtube, instagram, twitte
                 </a>
               }
               { youtube &&
-                  <a href={youtube} target="_blank" rel="noopener noreferrer">
+                <a href={youtube} target="_blank" rel="noopener noreferrer">
                   <RedesSociais  bgImg= {YoutubeImg} />
+                </a>
+              }
+              { oi_futuro_link && oi_futuro_imagem &&
+                <a href={oi_futuro_link} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg={oi_futuro_imagem.url} />
+                </a>
+              }
+              { oi_link && oi_imagem &&
+                <a href={oi_link} target="_blank" rel="noopener noreferrer">
+                  <RedesSociais  bgImg={oi_imagem.url} />
                 </a>
               }
             </IconsContainer>

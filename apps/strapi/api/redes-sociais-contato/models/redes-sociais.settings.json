@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "redes_sociais_contato",
   "info": {
-    "name": "redes sociais contato"
+    "name": "redes sociais contato",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -24,6 +25,30 @@
     },
     "formulario": {
       "type": "string"
+    },
+    "oi_link": {
+      "type": "string"
+    },
+    "oi_futuro_link": {
+      "type": "string"
+    },
+    "oi_imagem": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "oi_futuro_imagem": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
