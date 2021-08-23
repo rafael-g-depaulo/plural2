@@ -100,6 +100,7 @@ const CarouFotoBlock = styled.div`
 const Popped = styled.div`
   height: 80vh;
   width: 80vw;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,7 +111,7 @@ const Popped = styled.div`
 const PoppedImg = styled.div<{ bgImg: string }>`
   background-image: url("${props => props.bgImg}");
   width: 100%;
-  height: 50%;
+  min-height: 220px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,8 +119,6 @@ const PoppedImg = styled.div<{ bgImg: string }>`
 
 const PoppedTextContainer = styled.div`
   display: flex;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
@@ -128,20 +127,19 @@ const PoppedTextContainer = styled.div`
 
 const PoppedTitleContainer = styled.div`
   display: flex;
-  height: 25%;
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.4em;
 `;
 
 const PoppedGeneralInfo = styled.div`
-  height: 10%;
   width: 100%;
+  margin-bottom: 0.4em;
   color: white;
 `;
 
 const PoppedBio = styled.div`
-  height: 45%;
   width: 100%;
   color: white;
 `;

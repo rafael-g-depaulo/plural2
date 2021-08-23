@@ -91,7 +91,7 @@ const Popped = styled.div`
 const PoppedImg = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
   width: 50%;
-  height: 100%;
+  height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,6 +100,7 @@ const PoppedImg = styled.div<{bgImg: string}>`
 const PoppedTextContainer = styled.div`
   display: flex;
   width: 50%;
+  overflow-x: auto;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
@@ -115,8 +116,6 @@ const PoppedTitleContainer = styled.div`
 `;
 
 const PoppedGeneralInfo = styled.div`
-  height: 10%;
-  width: 100%;
   color: white;
 `;
 
