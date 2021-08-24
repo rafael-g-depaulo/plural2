@@ -109,7 +109,8 @@ const RedesSociais = styled.div<{bgImg: string}>`
   width: 80px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  border-radius: 100%;
   cursor: pointer;
 `;
 
