@@ -135,7 +135,7 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      15:00 às 18:00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
+                      15h00 às 18h00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
                     </BlockText>
                   </BlockContent>
                 </ProgramBlock>
@@ -150,10 +150,10 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      15:00 às 18:00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
+                      15h00 às 18h00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
                     </BlockText>
                     <BlockText>
-                      19:00 - Roda de Conversa: "A resistência e a representatividade LGBTQIA+ no parlamento brasileiro"
+                      19h00 - Roda de Conversa: "A resistência e a representatividade LGBTQIA+ no parlamento brasileiro"
                       <br /> Mediação: Érika Carvalho
                       <br /> Participantes: Quatro parlamentares LGBTQIAP+
                     </BlockText>
@@ -170,7 +170,7 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      20:30 - Performances:
+                      20h30 - Performances:
                       <br /> “Além de Preto…”
                       <br /> Denilson Tourinho (MG)
                       <br /> @denilsontourinho
@@ -180,7 +180,7 @@ export const Display: FC = () => {
                       <br /> @kaelstudart
                     </BlockText>
                     <BlockText>
-                      21:00 - Mostra de filmes - curtas brasileiros
+                      21h00 - Mostra de filmes - curtas brasileiros
                       <br /> Exibição de curtas brasileiros premiados no Festival For Rainbow (CE) @festivalforrainbow
                     </BlockText>
                   </BlockContent>
@@ -196,17 +196,17 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      15:00 às 18:00 - Oficina de “Vogue”
+                      15h00 às 18h00 - Oficina de “Vogue”
                       <br /> Úrsula Zion (DF)
                       <br /> @ursula.zion
                     </BlockText>
                     <BlockText>
-                      19:00 - Roda de Conversa “Economia e Mercado Cultural LGBTQIA+”
+                      19h00 - Roda de Conversa “Economia e Mercado Cultural LGBTQIA+”
                       <br /> Artur Santoro (SP)
-                      <br /> Hugo Cabral (SP/DF)
+                      <br /> Bárbara Iara Hugo (SP/DF)
                       <br /> Mc Delacroix (SP)
                       <br /> Sandro Rosa (RJ)
-                      <br /> Labelle Silva (CE)
+                      <br /> Dário Bezerra (CE)
                       <br /> Mediação: Marta Carvalho
                     </BlockText>
                   </BlockContent>
@@ -222,13 +222,13 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      20:30 - Performances
+                      20h30 - Performances
                       <br /> “A vida durante a Guerra”
                       <br /> Élle de Bernardini (SP)
                       <br /> @elleiote
                     </BlockText>
                     <BlockText>
-                      21:00 - Mostra de filmes - curtas brasileiros
+                      21h00 - Mostra de filmes - curtas brasileiros
                       <br /> Exibição de curtas brasileiros premiados no Festival For Rainbow (CE) @festivalforrainbow
                     </BlockText>
                   </BlockContent>
@@ -244,13 +244,13 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      19:00 - Live com Spartakus (BA)
+                      19h00 - Live com Spartakus (BA)
                       <br /> @spartakus
                       <br /> “Estratégias para hackear o sistema e sobreviver ao racismo e a LGBTfobia”
                       <br /> Spartakus e convidados do Festival: Denilson Tourinho (MG), Moara (DF) e Úrsula Zion (DF)
                     </BlockText>
                     <BlockText>
-                      20:00 - Batalha de “Vogue” parceria com a COB TV @cob.tv
+                      20h00 - Batalha de “Vogue” parceria com a COB TV @cob.tv
                     </BlockText>
                   </BlockContent>
                 </ProgramBlock>
@@ -265,15 +265,19 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      20:00 - Show Haynna e os Verdes (DF)
+                      20h00 - Show Haynna e os Verdes (DF)
                       <br /> @haynnaeosverdes
                     </BlockText>
                     <BlockText>
                       Mostra de Fotografias do concurso #InstaPlural2021. Premiados
                     </BlockText>
                     <BlockText>
-                      20:30 - Show Rosa Luz (DF)
+                      20h30 - Show Rosa Luz (DF)
                       <br /> @ros4luz
+                    </BlockText>
+                    <BlockText>
+                      21h - Show Johnny Hooker (PE)
+                      <br /> @johnnyhooker
                     </BlockText>
                   </BlockContent>
                 </ProgramBlock>
@@ -288,8 +292,8 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      20:30 - Show Rosa Luz (DF)
-                      <br /> @ros4luz
+                      20h00 - Show Moara (DF)
+                      <br /> @moaramusica
                     </BlockText>
                     <BlockText>
                       Mostra de Fotografias do concurso #InstaPlural2021.
