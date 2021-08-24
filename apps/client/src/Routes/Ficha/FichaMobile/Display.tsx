@@ -191,16 +191,10 @@ export const Display: FC = () => {
                     Desenvolvimento de APP e Site: <br />
                   </ListContent>
                   <ListContent>
-                    Gerente: <br />
-                    Rafael Gonçalves
-                  </ListContent>
-                  <ListContent>
-                    Equipe: <br />
-                    Gabriel Martins <br />
-                    Clara Maia <br />
-                    Raphael Müller <br />
-                    Nayara Rossi <br />
-                    Oswaldo Henrique <br />
+                    Gerência/DevOps: Rafael Gonçalves<br />
+                    Web Design: Nayara Rossi <br />
+                    Desenvolvimento Web: Lucas V. Magalhães<br />
+                    Desenvolvimento Mobile: Ícaro Rezende <br />
                   </ListContent>
                   <ListContent>
                     Agradecimentos: <br />
