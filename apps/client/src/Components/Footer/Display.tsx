@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   padding: 2.4em 0;
   margin: auto;
   gap: 0.8em;
-  max-width: 60em;
+  max-width: 95%;
 
   display: flex;
   align-items: center;
@@ -57,13 +57,13 @@ const Display: React.FC<DisplayProps> = ({ data }) => {
       <FooterContainer>
         <h2>Nossos Parceiros</h2>
         <PartnerList>
-          {pGroups.map(({ nome, parceiros }) => (
-            <>
+          {pGroups.map(({ nome, parceiros }, j) => (
+            <React.Fragment key={j}>
               {nome && <Label>{nome}:</Label>}
-              {parceiros.map(parceiro => (
-                <PImg src={parceiro.url} alt={parceiro.alternativeText} />
+              {parceiros.map((parceiro, i) => (
+                <PImg src={parceiro.url} alt={parceiro.alternativeText} key={`${j} ${i}`}/>
                 ))}
-            </>
+            </React.Fragment>
           ))
         }</PartnerList>
       </FooterContainer>
