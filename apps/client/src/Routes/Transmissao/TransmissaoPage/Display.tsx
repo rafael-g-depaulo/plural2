@@ -63,6 +63,7 @@ const VideoContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 3.2rem;
 `;
 
 export interface DisplayProps {
