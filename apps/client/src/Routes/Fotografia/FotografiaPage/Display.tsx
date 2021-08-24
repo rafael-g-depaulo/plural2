@@ -91,7 +91,7 @@ const Popped = styled.div`
 const PoppedImg = styled.div<{bgImg: string}>`
   background-image: url("${props => props.bgImg}");
   width: 50%;
-  height: 200px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
