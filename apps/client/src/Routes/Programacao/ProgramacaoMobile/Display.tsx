@@ -135,7 +135,7 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      15h00 às 18h00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
+                      15h00 às 18h00 - Oficina de "Introdução a Produção Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
                     </BlockText>
                   </BlockContent>
                 </ProgramBlock>
@@ -150,12 +150,12 @@ export const Display: FC = () => {
                   <Line />
                   <BlockContent>
                     <BlockText>
-                      15h00 às 18h00 - Oficina de "Introdução Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
+                      15h00 às 18h00 - Oficina de "Introdução a Produção Musical" com o Logic PRO" com Maika Julieta (SP) <br /> @malkajulieta.b
                     </BlockText>
                     <BlockText>
                       19h00 - Roda de Conversa: "A resistência e a representatividade LGBTQIA+ no parlamento brasileiro"
                       <br /> Mediação: Érika Carvalho
-                      <br /> Participantes: Quatro parlamentares LGBTQIAP+
+                      <br /> Participantes: David Miranda, Fábio Félix, Filipa Brunell, Thainara Faria
                     </BlockText>
                   </BlockContent>
                 </ProgramBlock>
@@ -226,6 +226,10 @@ export const Display: FC = () => {
                       <br /> “A vida durante a Guerra”
                       <br /> Élle de Bernardini (SP)
                       <br /> @elleiote
+                      <br />
+                      <br /> "Kebra 3000”
+                      <br /> Jaja Rolim (PT / DF)
+                      <br /> @rolimjaja
                     </BlockText>
                     <BlockText>
                       21h00 - Mostra de filmes - curtas brasileiros
