@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "parceiros",
+  "info": {
+    "name": "parceiros",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Parceiros": {
+      "type": "component",
+      "repeatable": true,
+      "component": "categoria.teste"
+    }
+  }
+}
