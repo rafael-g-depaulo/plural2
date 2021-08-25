@@ -204,7 +204,7 @@ export const Display: FC = () => {
                       19h00 - Roda de Conversa “Economia e Mercado Cultural LGBTQIA+”
                       <br /> Artur Santoro (SP)
                       <br /> Bárbara Iara Hugo (SP/DF)
-                      <br /> Mc Delacroix (SP)
+                      <br /> Mc Dellacroix (SP)
                       <br /> Sandro Rosa (RJ)
                       <br /> Dário Bezerra (CE)
                       <br /> Mediação: Marta Carvalho
