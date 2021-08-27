@@ -55,14 +55,13 @@ const Display: React.FC<DisplayProps> = ({ data }) => {
   return (
     <FooterBackground>
       <FooterContainer>
-        <h2>Nossos Parceiros</h2>
         <PartnerList>
           {pGroups.map(({ nome, parceiros }, j) => (
             <React.Fragment key={j}>
-              {nome && <Label>{nome}:</Label>}
+              {nome && <Label>{nome}</Label>}
               {parceiros.map((parceiro, i) => (
                 <PImg src={parceiro.url} alt={parceiro.alternativeText} key={`${j} ${i}`}/>
-                ))}
+              ))}
             </React.Fragment>
           ))
         }</PartnerList>
